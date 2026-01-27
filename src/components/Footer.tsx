@@ -53,7 +53,7 @@ export function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm mt-1">location_on</span>
-                                <span className="text-gray-400 text-sm leading-relaxed">Jl. Industri Raya No. 45<br />Surabaya, Indonesia</span>
+                                <span className="text-gray-400 text-sm leading-relaxed">Ngrowo, Karangjati<br />Bergas District, Semarang Regency, Central Java.</span>
                             </li>
                             <li className="flex items-center">
                                 <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">phone</span>
@@ -61,24 +61,9 @@ export function Footer() {
                             </li>
                             <li className="flex items-center">
                                 <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">email</span>
-                                <span className="text-gray-400 text-sm">sales@castletrading.com</span>
+                                <span className="text-gray-400 text-sm">Castlegroup0101@gmail.com</span>
                             </li>
                         </ul>
-                    </div>
-
-                    {/* Newsletter / Extra */}
-                    <div>
-                        <h4 className={clsx("text-lg font-bold mb-4 text-white", fontDisplay)}>Newsletter</h4>
-                        <form className="flex flex-col gap-2">
-                            <input
-                                type="email"
-                                placeholder="Your email address"
-                                className="px-4 py-2 rounded bg-white/5 border border-gray-700 text-white focus:outline-none focus:border-home-primary focus:ring-1 focus:ring-home-primary text-sm"
-                            />
-                            <button type="submit" className="px-4 py-2 rounded bg-white text-home-surface-dark font-bold hover:bg-home-primary hover:text-white transition-colors text-sm uppercase">
-                                Subscribe
-                            </button>
-                        </form>
                     </div>
 
                 </div>

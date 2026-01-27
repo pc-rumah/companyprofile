@@ -114,46 +114,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-24 bg-home-surface-light dark:bg-home-surface-dark border-y border-gray-200 dark:border-gray-800" id="about">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7aya94qrof4zlmv-y2H4mSckzNzM-iw2j9aUrNx9psbE_nzst641Kn_pX9eNljYxPboQVXTppjBwTMskALay9sxfgoVXzDqEZ2SY62d5AqO0rqtST-9VxXk5aNDEBkU4iv_hXuKgpPMbHEKRbl-5LQ0sfaZzTEC1lSInAvTkp21As_EpbYKXWsRsCTyTV5NFsOlUA8lw03t2v0YYdEZwMVyLCP_wHZMiSalVqrmuJ6kIrx_B3zNO2CCct9H-PKw9oHu43qMBKixZq"
-                alt="Charcoal manufacturing facility"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-home-primary/20 mix-blend-overlay"></div>
-            </div>
-            <div>
-              <span className="text-home-primary font-bold tracking-wider uppercase text-xs">Our Factory</span>
-              <h2 className="mt-2 text-3xl md:text-4xl font-lora font-bold text-gray-900 dark:text-white mb-6">
-                State-of-the-Art <br /><span className="text-home-accent-gold">Production Facility</span>
-              </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed text-sm">
-                At Castle Trading Group, we combine traditional craftsmanship with modern technology. Our facility is equipped to handle large-scale production while maintaining the rigorous quality checks that our global clients demand.
-              </p>
-              <ul className="space-y-4 mb-8">
-                {[
-                  "Strict Quality Control Systems",
-                  "High Production Capacity",
-                  "Ethical Sourcing & Labor Practices"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start">
-                    <span className="material-symbols-outlined text-home-primary mr-3 mt-1 text-base">check_circle</span>
-                    <span className="text-gray-700 dark:text-gray-400 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link href="/about" className="inline-block px-6 py-3 rounded border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-bold text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors uppercase tracking-wide">
-                Learn More About Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
