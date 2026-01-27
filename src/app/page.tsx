@@ -85,10 +85,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Cube Premium", size: "25mm x 25mm x 25mm", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAj1JQxhgSX9hyiJnrwoakGrT0UoH4BhdSUgx3ND1AeOrbhc4LWGNw6DsyxqRNDgTYjF9TExSPr8-i5vCy2SVKoEwyJSYB8gVZzctn_3Wuhg-3OKefFQAihDqBpVGRe8-C5fKRFJdpXx_-yHIRymT5tLH66qTW_fk8Wo6FNTEfbnM5FUdti_nD0_1FwhQewHYXWfS89omWqLCbujxN3l8xIXHg8iI8oWPyvt-ckglu7ruwf3bRWp-3OPdrh8RfS_8bu3BCFifNxv_gO" },
-              { title: "Hexagonal Gold", size: "20mm x 50mm", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAHazt1f52ax3DCZOgHCFbz4SeynZfvwArQUqxDbr4rPIMwXjeSInNqJnDN5Pn1Nk0VZwijXegQlAgDvPJRAaOK4OFyMYTtS-GcXcpJlEzJuzHmWrHvcTdCYNqSjIpasdCz7SN1oyHyU4i1gv3LViq57uavnyh05OxG8E9L0hKS4gR8fs1QTyyxWojff7w7c6jcxsklsTGnC4BDGRzeeJh4krUTlaBZto04MuKMow3TaVHdby0FwZDyWJhGEDFlXWgNVHP4BoqGqyDe" },
-              { title: "Finger Style", size: "18mm x 35mm", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuByAdAz4GAmvyY-st4AiPirm8zZsQzHgNApqIOojvoUFyBMWOrMDAXS1jhHi1PZYe7IEaHlZQRUNUdRXPFrSaOdPmS1HUeW__QgOkLMSiWD1tewkB9yhZcBrxXf7JE8oBB_rOoXpIqokBf-yHDDIovxpvAMXXvWE5VyGEIR-ScgJbbBDM0BacmgWhcgch1EbIek7s_8FBHtziJWvpA8_jNP68H89x0pL3xFB6pe2ZQ2L21aDplD-cJqWtIQ2gq3h9_rgLRIpFotUTAe" },
-              { title: "Flat Signature", size: "25mm x 25mm x 15mm", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAOPV3WxIxNASkO07_YlB2X3gTczx4nvTvg7D5aVVIHOCZGsF0hOciHDJ3axOphzsDexkpwRzbKDZULccPFtqJmMLPsDJfyl6RzpXKtV1D8dvqw8mn6T8xybo_JdITv3Wht4JeVbRTn2nCDqklUbBccr6cKiovxBrSa0rozHWQT8qW6Mxvx7Ah6kDX1iOh7xyk3rEfMyMHQBICKWNnI2kZI4W1zaKjtBVVundg0rLLtPpWG79ONI3cnLjxr8QvIQYbBQKmmQ33Y04-n" }
+              { title: "Cube Premium", size: "25mm x 25mm x 25mm", img: "/images/products/Cube.jpeg" },
+              { title: "Hexagonal Gold", size: "20mm x 50mm", img: "/images/products/Hexa.jpeg" },
+              { title: "Finger Style", size: "18mm x 35mm", img: "/images/products/hexa line.jpeg" },
+              { title: "Flat Signature", size: "25mm x 25mm x 15mm", img: "/images/products/RCL.jpeg" }
             ].map((product, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-lg shadow-md bg-white dark:bg-home-surface-dark">
                 <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 dark:bg-gray-800 h-64 relative block">
