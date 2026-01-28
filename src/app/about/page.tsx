@@ -82,7 +82,7 @@ export default function About() {
                                 <div className="space-y-4">
                                     <div className="h-64 rounded-2xl overflow-hidden shadow-lg border border-[#EADDD0] dark:border-[#4A3D33] relative">
                                         <Image
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAORsZtxRIfaSwKxkYVQ4gbu1gUiNYKfU_mwCp-exFmvX3viad3P-0TJDbHj7kQI70okYm2dyqAxRDa0iwicxUuewa9Q0I-OmCAFAh8kQeB6bcubXEi3lYVxIvuzr2ltMzJ6IJ_C-ashZUi79VSClHkBcpTaEQohH4xOjT4Cz3BJ7875EpoX7_l5qjuYiHqcG66w0ENiQVwUIBrKSE4e8l5f92LU69WRNNKX7TpEY3L9z-ZSSmp0MGW0mAkhEUbOzYaPm498RqV5wiw"
+                                            src="/images/about/1.jpeg"
                                             alt="Interior production area"
                                             fill
                                             className="object-cover"
@@ -98,7 +98,7 @@ export default function About() {
                                     </div>
                                     <div className="h-64 rounded-2xl overflow-hidden shadow-lg border border-[#EADDD0] dark:border-[#4A3D33] relative">
                                         <Image
-                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHvmynsgi8QkdICtSDbkBZaeRRbH7F7KekSXwKDrSCudHU9XPJIF_otP8KhaGoo9PwiGP-UB536qh-FInv98dmy2mxg0x_g-Kli5H2bNvw3r7ORpj2V1AsoBYgu6Q28Lzz_bWW8MtwM69g74BuFfEioCdT9qihPvwiLQdFt5MSfEJyb0TFFOOF7q1g3fE16Kn33JIq0gxwbMz_RcwsaTMYrKaf2RgaMKGJhrNEVkcQ6xz6e-aiSHhl-vJ8OTNRYM1nW4xmI4lnEoFR"
+                                            src="/images/about/2.jpeg"
                                             alt="Factory floor operations"
                                             fill
                                             className="object-cover"
@@ -131,42 +131,6 @@ export default function About() {
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Premium Briquettes Preview */}
-            <section className="py-20 bg-about-bg-light dark:bg-about-bg-dark">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Premium Briquettes</h2>
-                        <p className="text-gray-600 dark:text-[#A89689] max-w-2xl mx-auto">High calorie, low ash content, and long burning time. Explore our diverse range of shapes designed for optimal performance.</p>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            { title: "Cube Briquettes", desc: "Classic cube shape perfect for shisha and BBQ. Provides consistent heat distribution and stability.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDZpD-cLNHeiSL_r5RSUFrWOhq8I1x0noW9R5PZx7zZNShykYtOqwXIsVpENnwN-SAua0p8jGm27zaO2MITp0gGb_nct_9q_S5pxkJh3b2kYMvY5yKdp_Ju6GGnv7GD10_kAFhASHDK2ftyxAR8dM9xcnMI7v_UxJ3bKhYFFOWUjlh_74N3vMvUS62mr72Um1FJQAetRJIaqwj2v6tPy9AWZd_UGzmeYWuKZNLyu2kSd20fK81Z6dbnirgoPN7Iwk8h161PwgWJ8vl4" },
-                            { title: "Hexagonal Finger", desc: "Unique hexagonal design allows for better airflow stacking, ensuring a longer burning duration.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuD5x3Nx7mBiojgxkRXt7fipNtTL11BJw_gjdIWVJaIPZJGYsNt3DiNvO_3ewoWrXj46j8hqV_kgPVTYwiGRTlbs7pCtVd1HZJBpJafr05vek-DEYiHgshxiHT3cA4V8Pj6pwTSNGjnyZO64qhRhv3L1M0SSYjnThdyG2tmdKPFVoOJK0Ora8rN5gamFuSRhHTQiy4EgTL9HNnoqIWAYfQ5VKk85Voblv8ttUsqZTZDrl-HvD3DtVAMZSfeIDC8cONie2rgEtaGJ7_CS" },
-                            { title: "Grooved Finger", desc: "Engineered with surface grooves to increase surface area for faster ignition and intense heat.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuClOpbsj6oQw-nn_rLvt9Gfxgvt5vTCgw1PlJFiakOxXpHow_vwixg8o83TqBiMxob5l05CXYVflO6_YnoBZoW3yWLmaAjvRxBwwxSahsTJZAvXy4vwMFuAvt9pXjIAMosVvu_ZZBpnU8ClBHvMZAtM235r437fcPs0dzyLZcZ64M5rdwKXya93bWRAR-8BSdKSbfslPRXbQjMJ1yo-osNG23sV4yxb0ZzZ1mszOK7szIG0pMT9KLn1aXCYzo25ny6u81h2y3bBukuv" }
-                        ].map((product, idx) => (
-                            <div key={idx} className="bg-white dark:bg-about-surface-dark rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden group border border-[#EADDD0] dark:border-[#4A3D33]">
-                                <div className="relative h-64 overflow-hidden">
-                                    <div className="absolute inset-0 bg-about-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-                                    <Image
-                                        src={product.img}
-                                        alt={product.title}
-                                        fill
-                                        className="object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                    />
-                                </div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{product.title}</h3>
-                                    <p className="text-gray-600 dark:text-[#A89689] text-sm mb-4">{product.desc}</p>
-                                    <span className="inline-flex items-center text-about-primary text-sm font-semibold cursor-pointer">
-                                        View Specs <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
-                                    </span>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
