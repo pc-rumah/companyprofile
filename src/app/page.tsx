@@ -76,7 +76,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div className="max-w-2xl">
               <span className="text-home-primary font-bold tracking-wider uppercase text-xs">Our Products</span>
-              <h2 className="mt-2 text-3xl md:text-4xl font-lora font-bold text-gray-900 dark:text-white">Premium Briquette Shapes</h2>
+              <h2 className="mt-2 text-3xl md:text-4xl font-lora font-bold text-gray-900 dark:text-white">Our Briquette Shapes</h2>
               <p className="mt-4 text-gray-600 dark:text-gray-400 text-sm">Crafted to perfection in various forms to suit your specific burning requirements.</p>
             </div>
             <Link href="/products" className="hidden md:inline-flex items-center text-home-accent-gold hover:text-home-primary font-bold transition-colors mt-4 md:mt-0 text-sm">

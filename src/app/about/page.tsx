@@ -27,7 +27,7 @@ export default function About() {
                     <div className="w-full md:w-1/2 relative h-96 md:h-auto group overflow-hidden">
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
                         <Image
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuALlXA-FG0P0wncgtUIDFSaLF17Ubc1ztkUPy_4BXT83pJAZzv2BLdiQq3FKJJm-WH0qGkwOChBurWvO1TTbjxnK3sqtvenQI-SNyNFWNPKucKKYdKTq8XF6WBmx3gXaiezhquAU7ThRZox5PP0L4DXoRYV8gCfw8Wli-7eHRYUuLzjUCYrfl_znrO0uFvujkqV7muirFOiWMP4Iiwyr9g6Gs4PK-W0irTp5I8otv66Q1QRyFxOfxsAWa_O57pCi5sHLXWxsnrRMNR_"
+                            src="/images/buildings/factory.jpeg"
                             alt="Castle Trading Group Warehouse Facility"
                             fill
                             className="object-cover transform group-hover:scale-105 transition-transform duration-700"

@@ -46,7 +46,7 @@ export function Navbar() {
                         <Link href="/" className={linkClass('/')}>Home</Link>
                         <Link href="/products" className={linkClass('/products')}>Products</Link>
                         <Link href="/about" className={linkClass('/about')}>About</Link>
-                        {/* <Link href="#contact" className={linkClass('#contact')}>Contact</Link> */}
+                        <Link href="/contact" className={linkClass('#contact')}>Contact</Link>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ export function Navbar() {
                         <Link href="/" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home</Link>
                         <Link href="/products" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Products</Link>
                         <Link href="/about" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</Link>
-                        {/* <Link href="#contact" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</Link> */}
+                        <Link href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</Link>
                     </div>
                 </div>
             )}
