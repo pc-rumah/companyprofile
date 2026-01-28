@@ -39,14 +39,14 @@ export default function Products() {
             <section className="py-16 md:py-24 bg-products-bg-light dark:bg-products-bg-dark">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-                    {/* Product 1 */}
+                    {/* Product 1: Cube */}
                     <div className="group flex flex-col items-center bg-products-card-light dark:bg-products-card-dark rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-2xl">
-                        <div className="relative w-full aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+                        <div className="relative w-full aspect-video md:aspect-[16/9] overflow-hidden">
                             <Image
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMdwx98u0PDAqKn0lU10-4cjwV7VJU3rXELo25HRtYZ_uYQ9ZsRFBNJmnJ4zsXc_54EAXgA8hqX_4dnEIEDVBSGv5BwPNeLkiNoqp0xU1VQZ2O6uVKIwJoFM6rwP4CQOHCTXMlRCNCI9MGEV_B6oA4GqZ3OaV1UMKmt2EyCFntTeDWaNwXYZXo-c7EQ75eQl3sGRcx6luyDtotoEL5CSk5DhrRmdmJ9CGq1X1rSHA3Ul2_9IVecOrJ5k9BtoxpB5noLKEbcq95T_n"
-                                alt="Premium Cube Briquettes stacked neatly"
+                                src="/images/products/Cube.jpeg"
+                                alt="Premium Cube Briquettes"
                                 fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                className="object-contain group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                             <div className="absolute top-8 right-8 bg-products-primary text-black text-xs font-bold px-4 py-2 uppercase tracking-widest rounded-full shadow-lg">
@@ -97,14 +97,14 @@ export default function Products() {
                         </div>
                     </div>
 
-                    {/* Product 2 */}
+                    {/* Product 2: Hexagonal */}
                     <div className="group flex flex-col items-center bg-products-card-light dark:bg-products-card-dark rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-2xl">
-                        <div className="relative w-full aspect-[21/9] md:aspect-[21/7] overflow-hidden">
+                        <div className="relative w-full aspect-video md:aspect-[16/9] overflow-hidden">
                             <Image
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnSHv2j1xdjHvY-DBtXHJAINLIl28DznV-h9Rn8HDuL9EGH-Vws3DPedsM_rP0YCrf4HYX9h3iREqbpSAklxREIAQjlVaxEauDBrKxyFtBV1xtOIgU8fqhnBPREk-1MrjpJlOqtHVDQsaZQAAxqkcggEleCIH4IEb9NLqi-jMW-l0SKnCsJNljNaA0u7G-eW5y9dC5Pb0gSWs3xgohSbHrfh4zKNE6rxuOElB8nk91fMmt1FIs2z4Epx-zHzN_ES9H5vqUOuoD5AId"
-                                alt="Stick Finger Briquettes arranged in a row"
+                                src="/images/products/Hexa.jpeg"
+                                alt="Hexagonal Gold Briquettes"
                                 fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700 grayscale brightness-90 contrast-125"
+                                className="object-contain group-hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
                         </div>
@@ -112,11 +112,61 @@ export default function Products() {
                             <div className="flex flex-col md:flex-row md:items-start justify-between gap-8">
                                 <div className="flex-1">
                                     <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-products-text-light dark:text-white mb-6">
-                                        Finger / Stick Charcoal
+                                        Hexagonal Gold
                                     </h3>
                                     <div className="h-1.5 w-20 bg-products-primary mb-8 mx-auto md:mx-0"></div>
                                     <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
-                                        Cylindrical stick shape designed for specialized airflow. Provides intense heat for grilling or traditional hookah setups requiring rapid ignition and sustained high temperatures.
+                                        Unique hexagonal shape designed for efficient stacking and optimal airflow. Perfect for long burning sessions with consistent heat output and minimal ash production.
+                                    </p>
+                                </div>
+                                {/* Specs */}
+                                <div className="w-full md:w-80 bg-products-bg-light/50 dark:bg-black/20 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
+                                    <h4 className="text-products-primary font-bold text-xs uppercase tracking-[0.2em] mb-6 text-center md:text-left">Technical Specs</h4>
+                                    <div className="space-y-5">
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">timer</span> Burn Time
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">2.5+ Hours</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">whatshot</span> Heat Level
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">High</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">straighten</span> Sizes
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">20mm x 50mm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Product 3: Finger */}
+                    <div className="group flex flex-col items-center bg-products-card-light dark:bg-products-card-dark rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-2xl">
+                        <div className="relative w-full aspect-video md:aspect-[16/9] overflow-hidden">
+                            <Image
+                                src="/images/products/hexa line.jpeg"
+                                alt="Finger Style Briquettes"
+                                fill
+                                className="object-contain group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        </div>
+                        <div className="w-full max-w-4xl px-8 py-12 md:px-16 md:py-16 text-center md:text-left">
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-8">
+                                <div className="flex-1">
+                                    <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-products-text-light dark:text-white mb-6">
+                                        Finger / Stick Style
+                                    </h3>
+                                    <div className="h-1.5 w-20 bg-products-primary mb-8 mx-auto md:mx-0"></div>
+                                    <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+                                        Cylindrical stick shape designed for specialized airflow and rapid ignition. Provides intense heat, making it excellent for grilling or traditional usage.
                                     </p>
                                 </div>
                                 {/* Specs */}
@@ -134,6 +184,62 @@ export default function Products() {
                                                 <span className="material-icons text-products-primary text-lg">whatshot</span> Heat Level
                                             </span>
                                             <span className="text-sm font-bold text-products-text-light dark:text-white">Very High</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">straighten</span> Sizes
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">18mm x 35mm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Product 4: Flat */}
+                    <div className="group flex flex-col items-center bg-products-card-light dark:bg-products-card-dark rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-800 transition-all duration-500 hover:shadow-2xl">
+                        <div className="relative w-full aspect-[3/2] md:aspect-[16/9] overflow-hidden">
+                            <Image
+                                src="/images/products/RCLw.jpeg"
+                                alt="Flat Signature Briquettes"
+                                fill
+                                className="object-contain group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                        </div>
+                        <div className="w-full max-w-4xl px-8 py-12 md:px-16 md:py-16 text-center md:text-left">
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-8">
+                                <div className="flex-1">
+                                    <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-products-text-light dark:text-white mb-6">
+                                        RCL
+                                    </h3>
+                                    <div className="h-1.5 w-20 bg-products-primary mb-8 mx-auto md:mx-0"></div>
+                                    <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl">
+                                        Distinct flat shape offering great stability and surface area. Engineered for specific heat management needs, ensuring a smooth and consistent experience.
+                                    </p>
+                                </div>
+                                {/* Specs */}
+                                <div className="w-full md:w-80 bg-products-bg-light/50 dark:bg-black/20 p-8 rounded-xl border border-gray-100 dark:border-gray-700">
+                                    <h4 className="text-products-primary font-bold text-xs uppercase tracking-[0.2em] mb-6 text-center md:text-left">Technical Specs</h4>
+                                    <div className="space-y-5">
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">timer</span> Burn Time
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">1.5+ Hours</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">whatshot</span> Heat Level
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">Medium-High</span>
+                                        </div>
+                                        <div className="flex items-center justify-between">
+                                            <span className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                <span className="material-icons text-products-primary text-lg">straighten</span> Sizes
+                                            </span>
+                                            <span className="text-sm font-bold text-products-text-light dark:text-white">25mm x 25mm x 15mm</span>
                                         </div>
                                     </div>
                                 </div>
@@ -156,9 +262,6 @@ export default function Products() {
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <button className="px-8 py-4 bg-products-primary text-white font-bold rounded shadow-lg hover:bg-yellow-600 transition-colors uppercase tracking-widest text-sm">
                             Contact Sales
-                        </button>
-                        <button className="px-8 py-4 bg-transparent border border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white font-bold rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors uppercase tracking-widest text-sm">
-                            Download Catalog
                         </button>
                     </div>
                 </div>

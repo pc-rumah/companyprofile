@@ -31,9 +31,9 @@ export default function Home() {
                 Explore Our Products
                 <span className="material-symbols-outlined ml-2">arrow_forward</span>
               </Link>
-              <Link href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-home-accent-gold text-base font-bold rounded-md text-white hover:text-home-accent-gold transition-all duration-300 bg-white/5 backdrop-blur-sm">
+              {/* <Link href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 hover:border-home-accent-gold text-base font-bold rounded-md text-white hover:text-home-accent-gold transition-all duration-300 bg-white/5 backdrop-blur-sm">
                 Contact Sales
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
