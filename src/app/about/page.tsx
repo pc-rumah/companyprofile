@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
     return (
@@ -140,9 +141,9 @@ export default function About() {
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Ready to Partner with Us?</h2>
                     <p className="text-gray-600 dark:text-[#A89689] mb-8 text-lg">We supply premium charcoal bulk orders worldwide. Contact us today for a quote.</p>
-                    <button className="bg-about-primary hover:bg-[#8B4513] text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg shadow-about-primary/30">
+                    <Link href="/contact" className="bg-about-primary hover:bg-[#8B4513] text-white font-bold py-3 px-8 rounded-full transition-colors shadow-lg shadow-about-primary/30">
                         Contact Sales
-                    </button>
+                    </Link>
                 </div>
             </section>
         </main>

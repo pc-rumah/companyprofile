@@ -55,7 +55,7 @@ const products: Product[] = [
   {
     id: "finger",
     category: "BBQ / GRILLING",
-    title: "Finger / Stick Briquettes",
+    title: "Hexa Line Briquettes",
     description: "Cylindrical stick shape designed for specialized airflow and rapid ignition. Provides intense heat.",
     image: "/images/products/hexa line.jpeg",
     specs: [
@@ -108,12 +108,12 @@ const ProductCard = ({ product }: { product: Product }) => (
       </div>
 
       {/* Action */}
-      <div className="mt-auto pt-4">
+      {/* <div className="mt-auto pt-4">
         <button className="group inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/20 hover:border-[#ffd700] text-white hover:text-[#ffd700] transition-colors rounded-lg font-medium text-sm tracking-wide uppercase">
           Inquire Now
           <span className="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
         </button>
-      </div>
+      </div> */}
     </div>
   </div>
 );
