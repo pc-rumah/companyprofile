@@ -16,14 +16,6 @@ export default function Contact() {
                         </p>
 
                         <div className="space-y-16">
-                            <div className="border-l-4 border-home-primary pl-8">
-                                <h3 className="font-playfair text-2xl font-bold mb-3 flex items-center gap-3 text-white">
-                                    <span className="material-icons text-home-primary">call</span>
-                                    Direct Line
-                                </h3>
-                                <p className="text-3xl md:text-4xl font-bold mb-2 text-white">+62 24 1234 5678</p>
-                                <p className="text-gray-500 font-medium tracking-wide text-sm uppercase">(Available for WhatsApp)</p>
-                            </div>
 
                             <div className="border-l-4 border-home-primary pl-8">
                                 <h3 className="font-playfair text-2xl font-bold mb-3 flex items-center gap-3 text-white">

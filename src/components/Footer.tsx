@@ -56,10 +56,6 @@ export function Footer() {
                                 <span className="text-gray-400 text-sm leading-relaxed">Ngrowo, Karangjati<br />Bergas District, Semarang Regency, Central Java.</span>
                             </li>
                             <li className="flex items-center">
-                                <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">phone</span>
-                                <span className="text-gray-400 text-sm">+62 812 3456 7890</span>
-                            </li>
-                            <li className="flex items-center">
                                 <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">email</span>
                                 <span className="text-gray-400 text-sm">Castlegroup0101@gmail.com</span>
                             </li>

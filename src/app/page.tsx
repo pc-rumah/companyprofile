@@ -88,7 +88,7 @@ export default function Home() {
               { title: "Cube Premium", size: "25mm x 25mm x 25mm", img: "/images/products/Cube.jpeg" },
               { title: "Hexagonal Gold", size: "20mm x 50mm", img: "/images/products/Hexa.jpeg" },
               { title: "Finger Style", size: "18mm x 35mm", img: "/images/products/hexa line.jpeg" },
-              { title: "Flat Signature", size: "25mm x 25mm x 15mm", img: "/images/products/RCL.jpeg" }
+              { title: "Flat Signature", size: "25mm x 25mm x 15mm", img: "/images/products/RCLw.jpeg" }
             ].map((product, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-lg shadow-md bg-white dark:bg-home-surface-dark">
                 <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 dark:bg-gray-800 h-64 relative block">

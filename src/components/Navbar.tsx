@@ -48,6 +48,21 @@ export function Navbar() {
                         <Link href="/about" className={linkClass('/about')}>About</Link>
                         <Link href="/contact" className={linkClass('#contact')}>Contact</Link>
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="flex md:hidden">
+                        <button
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary focus:outline-none"
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {isMobileMenuOpen ? (
+                                <span className="material-symbols-outlined text-2xl">close</span>
+                            ) : (
+                                <span className="material-symbols-outlined text-2xl">menu</span>
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
 
