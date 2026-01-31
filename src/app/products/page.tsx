@@ -19,7 +19,7 @@ const products: Product[] = [
   {
     id: "cube",
     category: "SHISHA - BBQ",
-    title: "Cube Briquettes",
+    title: "Cube",
     description: "Premium cube-shaped briquettes designed for optimal heat distribution and long burning sessions.",
     image: "/images/products/Cube.jpeg",
     specs: [
@@ -31,7 +31,7 @@ const products: Product[] = [
   {
     id: "hexagonal",
     category: "BBQ / GRILLING",
-    title: "Hexagonal Briquettes",
+    title: "Hexagonal",
     description: "Unique hexagonal shape offering superior airflow and consistent high temperature for grilling.",
     image: "/images/products/Hexa.jpeg",
     specs: [
@@ -43,7 +43,7 @@ const products: Product[] = [
   {
     id: "rcl",
     category: "BBQ / GRILLING",
-    title: "RCL Briquettes",
+    title: "RCL",
     description: "Cylindrical stick briquettes ideal for specific industrial or specialized ceremonial burning needs.",
     image: "/images/products/RCLw.jpeg",
     specs: [
@@ -55,7 +55,7 @@ const products: Product[] = [
   {
     id: "finger",
     category: "BBQ / GRILLING",
-    title: "Hexa Line Briquettes",
+    title: "Hexa Line",
     description: "Cylindrical stick shape designed for specialized airflow and rapid ignition. Provides intense heat.",
     image: "/images/products/hexa line.jpeg",
     specs: [
@@ -99,7 +99,6 @@ const ProductCard = ({ product }: { product: Product }) => (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8">
         {product.specs.map((spec, idx) => (
           <div key={idx} className="flex items-center gap-3">
-            <span className="text-[#ffd700] material-icons text-sm">check</span>
             <span className="text-gray-300 text-sm font-medium">
               {spec.label}{spec.value ? `: ${spec.value}` : ''}
             </span>
