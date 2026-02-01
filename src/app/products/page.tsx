@@ -96,7 +96,7 @@ const ProductCard = ({ product }: { product: Product }) => (
       </div>
 
       {/* Specs Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8">
         {product.specs.map((spec, idx) => (
           <div key={idx} className="flex items-center gap-3">
             <span className="text-gray-300 text-sm font-medium">
@@ -104,7 +104,7 @@ const ProductCard = ({ product }: { product: Product }) => (
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Action */}
       {/* <div className="mt-auto pt-4">
