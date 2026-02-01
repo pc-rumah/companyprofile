@@ -31,7 +31,7 @@ const products: Product[] = [
   {
     id: "hexagonal",
     category: "BBQ / GRILLING",
-    title: "Hexagonal",
+    title: "Hexa",
     description: "Unique hexagonal shape offering superior airflow and consistent high temperature for grilling.",
     image: "/images/products/Hexa.jpeg",
     specs: [
@@ -94,25 +94,6 @@ const ProductCard = ({ product }: { product: Product }) => (
           {product.description}
         </p>
       </div>
-
-      {/* Specs Grid */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-8">
-        {product.specs.map((spec, idx) => (
-          <div key={idx} className="flex items-center gap-3">
-            <span className="text-gray-300 text-sm font-medium">
-              {spec.label}{spec.value ? `: ${spec.value}` : ''}
-            </span>
-          </div>
-        ))}
-      </div> */}
-
-      {/* Action */}
-      {/* <div className="mt-auto pt-4">
-        <button className="group inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-white/20 hover:border-[#ffd700] text-white hover:text-[#ffd700] transition-colors rounded-lg font-medium text-sm tracking-wide uppercase">
-          Inquire Now
-          <span className="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </button>
-      </div> */}
     </div>
   </div>
 );

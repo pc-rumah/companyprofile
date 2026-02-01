@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Cube", img: "/images/products/Cube.jpeg" },
-              { title: "Hexagonal", img: "/images/products/Hexa.jpeg" },
+              { title: "Hexa", img: "/images/products/Hexa.jpeg" },
               { title: "Hexa Line", img: "/images/products/hexa line.jpeg" },
               { title: "RCL", img: "/images/products/RCLw.jpeg" }
             ].map((product, idx) => (
