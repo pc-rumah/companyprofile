@@ -61,6 +61,10 @@ export function Footer() {
                                 <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">email</span>
                                 <span className="text-gray-400 text-sm">Castlegroup0101@gmail.com</span>
                             </li>
+                            <li className="flex items-center">
+                                <span className="material-symbols-outlined text-home-accent-gold mr-2 text-sm">phone</span>
+                                <span className="text-gray-400 text-sm">0857-3592-5977</span>
+                            </li>
                         </ul>
                     </div>
 
