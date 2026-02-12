@@ -30,6 +30,14 @@
   --color-products-card-light: #FFFFFF;
   --color-products-text-light: #1A1A1A;
   --color-products-text-dark: #E0E0E0;
+
+  /* Gallery Theme */
+  --color-gallery-primary: #A0522D;
+  --color-gallery-bg-light: #FBF8F4;
+  --color-gallery-bg-dark: #2F241C;
+  --color-gallery-surface-light: #FFFFFF;
+  --color-gallery-surface-dark: #3A2E25;
+  --font-roboto-condensed: var(--font-roboto-condensed);
 }
 
 /* Material Symbols - filled/weight variations helper */

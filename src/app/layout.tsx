@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Lora, Outfit, Playfair_Display } from "next/font/google";
+import { Inter, Roboto, Lora, Outfit, Playfair_Display, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Navbar } from "@/components/Navbar";
@@ -10,6 +10,7 @@ const roboto = Roboto({ weight: ["300", "400", "500", "700"], subsets: ["latin"]
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const robotoCondensed = Roboto_Condensed({ subsets: ["latin"], variable: "--font-roboto-condensed" });
 
 export const metadata: Metadata = {
   title: "Castle Trading Group",
@@ -34,6 +35,7 @@ export default function RootLayout({
           lora.variable,
           outfit.variable,
           playfair.variable,
+          robotoCondensed.variable,
           "antialiased font-sans"
         )}
       >

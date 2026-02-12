@@ -45,6 +45,7 @@ export function Navbar() {
                     <div className="hidden md:flex space-x-8 items-center">
                         <Link href="/" className={linkClass('/')}>Home</Link>
                         <Link href="/products" className={linkClass('/products')}>Products</Link>
+                        <Link href="/gallery" className={linkClass('/gallery')}>Gallery</Link>
                         <Link href="/about" className={linkClass('/about')}>About</Link>
                         <Link href="/contact" className={linkClass('#contact')}>Contact</Link>
                     </div>
@@ -72,6 +73,7 @@ export function Navbar() {
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home</Link>
                         <Link href="/products" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Products</Link>
+                        <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Gallery</Link>
                         <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</Link>
                         <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</Link>
                     </div>
