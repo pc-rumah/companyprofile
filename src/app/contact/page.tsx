@@ -28,6 +28,18 @@ export default function Contact() {
                                     </a>
                                 </div>
                             </div>
+
+                            <div className="border-l-4 border-home-primary pl-8">
+                                <h3 className="font-playfair text-2xl font-bold mb-3 flex items-center gap-3 text-white">
+                                    <span className="material-icons text-home-primary">call</span>
+                                    Phone
+                                </h3>
+                                <div className="flex flex-col gap-2 text-lg md:text-xl font-medium">
+                                    <a href="tel:+6285735925977" className="text-gray-300 hover:text-home-primary transition-colors w-fit">
+                                        0857-3592-5977
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
