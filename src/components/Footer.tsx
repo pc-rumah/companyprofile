@@ -26,14 +26,14 @@ export function Footer() {
                         <p className="text-gray-400 max-w-sm mb-6 text-sm leading-relaxed">
                             Providing the world with high-quality, sustainable coconut shell charcoal briquettes. Your reliable partner in renewable energy.
                         </p>
-                        <div className="flex space-x-4">
+                        {/* <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-home-primary transition-colors">
                                 <span className="material-symbols-outlined">share</span>
                             </a>
                             <a href="#" className="text-gray-400 hover:text-home-primary transition-colors">
                                 <span className="material-symbols-outlined">email</span>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Quick Links */}
@@ -42,6 +42,8 @@ export function Footer() {
                         <ul className="space-y-2">
                             <li><Link href="/" className="text-gray-400 hover:text-home-primary transition-colors text-sm">Home</Link></li>
                             <li><Link href="/products" className="text-gray-400 hover:text-home-primary transition-colors text-sm">Products</Link></li>
+                            <li><Link href="/gallery" className="text-gray-400 hover:text-home-primary transition-colors text-sm">Gallery</Link></li>
+                            <li><Link href="/certificates" className="text-gray-400 hover:text-home-primary transition-colors text-sm">Certificates</Link></li>
                             <li><Link href="/about" className="text-gray-400 hover:text-home-primary transition-colors text-sm">About Us</Link></li>
                             <li><Link href="#contact" className="text-gray-400 hover:text-home-primary transition-colors text-sm">Contact</Link></li>
                         </ul>

@@ -8,11 +8,12 @@ import clsx from 'clsx';
 export function Navbar() {
     const pathname = usePathname();
     const isHome = pathname === '/';
+    const isCertificates = pathname === '/certificates';
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navClass = clsx(
         "z-50 w-full transition-colors duration-300 border-b",
-        isHome ? "fixed top-0 bg-home-surface-light/90 dark:bg-home-surface-dark/90 backdrop-blur-md border-gray-200 dark:border-gray-800"
+        (isHome || isCertificates) ? "fixed top-0 bg-home-surface-light/90 dark:bg-home-surface-dark/90 backdrop-blur-md border-transparent"
             : "sticky top-0 bg-white/95 dark:bg-home-surface-dark/95 backdrop-blur shadow-sm border-gray-200 dark:border-gray-800"
     );
 
@@ -24,8 +25,8 @@ export function Navbar() {
     );
 
     // Determine font classes based on path
-    const fontMain = isHome ? 'font-roboto' : pathname?.startsWith('/about') ? 'font-outfit' : 'font-inter';
-    const fontDisplay = isHome ? 'font-lora' : pathname?.startsWith('/about') ? 'font-outfit' : 'font-playfair';
+    const fontMain = (isHome || isCertificates) ? 'font-roboto' : pathname?.startsWith('/about') ? 'font-outfit' : 'font-inter';
+    const fontDisplay = (isHome || isCertificates) ? 'font-lora' : pathname?.startsWith('/about') ? 'font-outfit' : 'font-playfair';
 
     return (
         <nav className={clsx(navClass, fontMain)}>
@@ -46,6 +47,7 @@ export function Navbar() {
                         <Link href="/" className={linkClass('/')}>Home</Link>
                         <Link href="/products" className={linkClass('/products')}>Products</Link>
                         <Link href="/gallery" className={linkClass('/gallery')}>Gallery</Link>
+                        <Link href="/certificates" className={linkClass('/certificates')}>Certificates</Link>
                         <Link href="/about" className={linkClass('/about')}>About</Link>
                         <Link href="/contact" className={linkClass('#contact')}>Contact</Link>
                     </div>
@@ -74,6 +76,7 @@ export function Navbar() {
                         <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Home</Link>
                         <Link href="/products" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Products</Link>
                         <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Gallery</Link>
+                        <Link href="/certificates" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Certificates</Link>
                         <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">About</Link>
                         <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-home-primary dark:hover:text-home-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md">Contact</Link>
                     </div>
