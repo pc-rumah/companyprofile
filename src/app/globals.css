@@ -6,6 +6,7 @@
   --font-lora: var(--font-lora);
   --font-outfit: var(--font-outfit);
   --font-playfair: var(--font-playfair);
+  --font-oswald: var(--font-oswald);
 
   /* Home Theme */
   --color-home-primary: #FF6A00;
@@ -32,11 +33,12 @@
   --color-products-text-dark: #E0E0E0;
 
   /* Gallery Theme */
-  --color-gallery-primary: #A0522D;
-  --color-gallery-bg-light: #FBF8F4;
-  --color-gallery-bg-dark: #2F241C;
+  --color-gallery-primary: #FF6A00;
+  --color-gallery-secondary: #D4AF37;
+  --color-gallery-bg-light: #F3F4F6;
+  --color-gallery-bg-dark: #0B0B0D;
   --color-gallery-surface-light: #FFFFFF;
-  --color-gallery-surface-dark: #3A2E25;
+  --color-gallery-surface-dark: #1E1E22;
   --font-roboto-condensed: var(--font-roboto-condensed);
 
   /* Certificates Theme */
