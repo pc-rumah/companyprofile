@@ -143,7 +143,7 @@ export default function GalleryPage() {
                 </div>
             </section>
 
-            <section className="relative h-[80vh] overflow-hidden group">
+            {/* <section className="relative h-[80vh] overflow-hidden group">
                 <Image
                     alt="Intense production environment"
                     className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
@@ -155,7 +155,7 @@ export default function GalleryPage() {
                     <span className="bg-gallery-primary text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-sm mb-4">Quality Focus</span>
                     <h3 className="text-4xl md:text-5xl font-oswald font-bold text-white uppercase shadow-black drop-shadow-lg">Industrial Mastery</h3>
                 </div>
-            </section>
+            </section> */}
 
             <section className="bg-gallery-surface-light dark:bg-gallery-surface-dark overflow-hidden group">
                 <div className="flex flex-col md:flex-row min-h-[600px]">
