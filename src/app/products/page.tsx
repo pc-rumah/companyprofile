@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
 
 interface ProductSpec {
   label: string;
@@ -17,10 +17,24 @@ interface Product {
 
 const products: Product[] = [
   {
+    id: "cubeHole",
+    category: "SHISHA - BBQ",
+    title: "Cube Hole 32",
+    description:
+      "Premium cube-shaped briquettes designed for optimal heat distribution and long burning sessions.",
+    image: "/images/products/cubeHole32.jpeg",
+    specs: [
+      { label: "Size", value: "25x25x25mm, 26x26x26mm" },
+      { label: "Burning Time", value: "2+ Hours" },
+      { label: "Ash Content", value: "< 2.5%" },
+    ],
+  },
+  {
     id: "cube",
     category: "SHISHA - BBQ",
     title: "Cube",
-    description: "Premium cube-shaped briquettes designed for optimal heat distribution and long burning sessions.",
+    description:
+      "Premium cube-shaped briquettes designed for optimal heat distribution and long burning sessions.",
     image: "/images/products/Cube.jpeg",
     specs: [
       { label: "Size", value: "25x25x25mm, 26x26x26mm" },
@@ -32,7 +46,8 @@ const products: Product[] = [
     id: "hexagonal",
     category: "BBQ / GRILLING",
     title: "Hexa",
-    description: "Unique hexagonal shape offering superior airflow and consistent high temperature for grilling.",
+    description:
+      "Unique hexagonal shape offering superior airflow and consistent high temperature for grilling.",
     image: "/images/products/Hexa.jpeg",
     specs: [
       { label: "Length", value: "5cm - 10cm" },
@@ -44,7 +59,8 @@ const products: Product[] = [
     id: "rcl",
     category: "BBQ / GRILLING",
     title: "RCL",
-    description: "Cylindrical stick briquettes ideal for specific industrial or specialized ceremonial burning needs.",
+    description:
+      "Cylindrical stick briquettes ideal for specific industrial or specialized ceremonial burning needs.",
     image: "/images/products/RCLw.jpeg",
     specs: [
       { label: "Diameter", value: "1.8cm - 2.0cm" },
@@ -56,14 +72,15 @@ const products: Product[] = [
     id: "finger",
     category: "BBQ / GRILLING",
     title: "Hexa Line",
-    description: "Cylindrical stick shape designed for specialized airflow and rapid ignition. Provides intense heat.",
+    description:
+      "Cylindrical stick shape designed for specialized airflow and rapid ignition. Provides intense heat.",
     image: "/images/products/hexa line.jpeg",
     specs: [
       { label: "Length", value: "5cm - 10cm" },
       { label: "High Calorific Value", value: "" },
       { label: "Smokeless & Odorless", value: "" },
-    ]
-  }
+    ],
+  },
 ];
 
 const ProductCard = ({ product }: { product: Product }) => (
@@ -118,11 +135,11 @@ export default function Products() {
             Our Premium Collections
           </h2>
           <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 leading-relaxed">
-            Discover our range of sustainable, high-performance coconut charcoal briquettes designed for every need.
+            Discover our range of sustainable, high-performance coconut charcoal
+            briquettes designed for every need.
           </p>
         </div>
       </header>
-
 
       {/* Products Grid */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
@@ -136,15 +153,21 @@ export default function Products() {
       {/* CTA */}
       <section className="py-20 bg-[#121212] border-t border-white/5">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="text-[#ffd700] uppercase tracking-[0.2em] text-sm font-bold mb-4 block">B2B Partnership</span>
+          <span className="text-[#ffd700] uppercase tracking-[0.2em] text-sm font-bold mb-4 block">
+            B2B Partnership
+          </span>
           <h2 className="font-playfair text-3xl md:text-5xl font-bold text-white mb-8">
             Ready to Order?
           </h2>
           <p className="text-gray-400 mb-10 max-w-xl mx-auto text-lg">
-            Contact our sales team for a custom quote or to request product samples. We offer private labeling (OEM) services.
+            Contact our sales team for a custom quote or to request product
+            samples. We offer private labeling (OEM) services.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="px-10 py-4 bg-[#ffd700] text-black font-bold rounded hover:bg-[#e6c200] transition-colors uppercase tracking-widest text-sm shadow-lg shadow-[#ffd700]/20">
+            <Link
+              href="/contact"
+              className="px-10 py-4 bg-[#ffd700] text-black font-bold rounded hover:bg-[#e6c200] transition-colors uppercase tracking-widest text-sm shadow-lg shadow-[#ffd700]/20"
+            >
               Contact Sales
             </Link>
           </div>
@@ -153,4 +176,3 @@ export default function Products() {
     </main>
   );
 }
-
