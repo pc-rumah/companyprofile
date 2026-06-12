@@ -7,6 +7,7 @@
   --font-outfit: var(--font-outfit);
   --font-playfair: var(--font-playfair);
   --font-oswald: var(--font-oswald);
+  --font-manrope: var(--font-manrope);
 
   /* Home Theme */
   --color-home-primary: #FF6A00;
@@ -47,6 +48,18 @@
   --color-cert-gold-muted: #A68930;
   --color-cert-charcoal-deep: #0F0F11;
   --color-cert-charcoal-light: #1E1E22;
+
+  /* Company Theme */
+  --color-company-primary: #ff6a00;
+  --color-company-primary-container: #4d2000;
+  --color-company-on-primary-container: #ffdcc7;
+  --color-company-surface: #121212;
+  --color-company-surface-lowest: #0f0f0f;
+  --color-company-surface-container: #1e1e1e;
+  --color-company-on-surface: #e0e0e0;
+  --color-company-on-surface-variant: #a0a0a0;
+  --color-company-outline-variant: #333333;
+  --color-company-gold: #d4af37;
 }
 
 @utility bg-noise {
@@ -68,4 +81,16 @@ body {
   body {
     background: var(--color-home-bg-dark);
   }
+}
+
+/* Scrollbar and custom utilities for the Company page */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.timeline-scroll-container {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
