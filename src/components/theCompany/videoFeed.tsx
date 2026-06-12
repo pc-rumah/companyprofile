@@ -26,6 +26,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNe7ZTHrZgYsvtbL_EnZL8QrJ598UAQ3TzJh_IVJv8mKziRh_iwUgCjtcALeN5pKlrsn7PXVgU8xkAZ_GJly-juz0UAlmVaKk5LseSWmBTuvOnNX4NWYqo8WsRIdVJavXeQLmgDn83UfvzTFgNaeQnx5_me6LYbgQAg2xmQKqfEQDIxQ6cmrjkuFpctTSBAWWHrEeDQ9I8eiRtVzrh5ky0OOOtaZpMvLRuodLhQ6r89-Kk7r1H3NTyJlMsPqjal1kNtwiXI4cXgNIy"
                             fill
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -49,6 +50,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-DqQ5R0Pfgj0KZyRvuOcGTSlm6DBumenQjU146RO5HQq5HRqUyfstx8EzCu98V5mZ3jJmkuikkYu1QbQw8M7wBIeY2V1Qj2NZtf2DRcfHcx8h9_Gj67fHg81YMJEiQihxX5hjjqhun9uueUkQczQqpOxFAmexpfTRPeBsE0Kv4vl3qA0_sTdaqStAuJc7gbdI0BWCezNQyFr8grsTga75PgvWCLozoknTFYf_zGuJtR4Cnw-Qy0cnBxfBHx8dV8Gmou6zC73mlGSO"
                             fill
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -71,6 +73,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAznYEqsowpMbQrxR5OiSdMggu7bGrmRwM0BfX4z7duGQPS7LsfOL_1HjFES98m7q8JJzxu6OaDQsHlTz7o8A_TU0zg5-ayu3AtfYMuZRtmLKPTwQvE9UO8-NPsmSgNlzd-HPBsRRbMETJE1Yl-uWsOXl386nBWYQWQG8_wxR3I8PEJGBJk9dCcLAVtwJp6oiDnL2CFA74dpjBVZlKuuHIay4enwqNjtVmuQ2b_zoPjLOKY0W8JbiXHln1yjXHjTezFODc90HwOvEOu"
                             fill
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -93,6 +96,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAKxf3sVZBil2nuoQW4oSvCaii67TYqAyf1MIiWs2p0nvhJZEV-mWrw6iM1ih6iPd8L3vr1i6FOQ0KUPKlQr5r-udca3XhTgbDODTE6roo0UP2bHJO3EcM6rtghHypvamTZ3EjfaG_aOuaVmfhAbp4h8bSsQ02XgU4LNHOQPvh2QYoOlCWLnknvMAWhgIM4e-GbaN8cu9a8UkTa1k6kUy76S52HPQ2VDoDVIwyxLAQ9_t7ijy9Uz4l9pi8_jZk496BV2nvtExshGwJ"
                             fill
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -115,6 +119,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtMeywb-DEcxrvbdhMMICxpJpr9oTMrhxJHkHBTKMsQeH8dLsTNxKYQMX4gu1qHC1oFBEBqkSIoS3i-nVe_l4W1nctXxc_6O05Uj0xZRkzLsQdjkGUE_Hmfe92PaSWZ-4CF0fMXM85ROe3O6vcvLMBTKlR6ouv2rUGd4PjnO5qdMJMy_Vg3OQmVbkhHCPU3Pq8Q0iGUj9NVUAuKoFG-v9gTHFGoBRLqV15pfBqHQmDYvb40WpoJSZM-3Z3MR-cAcxq4ALHcVZvGyUT"
                             fill
+                            loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
