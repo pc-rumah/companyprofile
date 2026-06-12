@@ -12,12 +12,12 @@ export default function BentoProfile() {
                             <div className="flex items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
                                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-company-primary p-1 flex-shrink-0">
                                     <div className="w-full h-full rounded-full bg-company-surface-container flex items-center justify-center overflow-hidden">
-                                        <span className="text-company-primary font-black text-2xl sm:text-3xl">CC</span>
+                                        <span className="text-company-primary font-black text-2xl sm:text-3xl">CB</span>
                                     </div>
                                 </div>
                                 <div>
-                                    <h2 className="text-3xl sm:text-4xl font-bold text-company-on-surface leading-tight mb-1">CarbonCraft</h2>
-                                    <p className="text-company-primary font-medium text-base sm:text-lg">@carboncraft_id</p>
+                                    <h2 className="text-3xl sm:text-4xl font-bold text-company-on-surface leading-tight mb-1">CASTLE BRIQUETTE</h2>
+                                    <p className="text-company-primary font-medium text-base sm:text-lg">@castle_briquette</p>
                                 </div>
                             </div>
                             <p className="text-company-on-surface-variant text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
@@ -48,15 +48,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Burning Charcoal"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtMeywb-DEcxrvbdhMMICxpJpr9oTMrhxJHkHBTKMsQeH8dLsTNxKYQMX4gu1qHC1oFBEBqkSIoS3i-nVe_l4W1nctXxc_6O05Uj0xZRkzLsQdjkGUE_Hmfe92PaSWZ-4CF0fMXM85ROe3O6vcvLMBTKlR6ouv2rUGd4PjnO5qdMJMy_Vg3OQmVbkhHCPU3Pq8Q0iGUj9NVUAuKoFG-v9gTHFGoBRLqV15pfBqHQmDYvb40WpoJSZM-3Z3MR-cAcxq4ALHcVZvGyUT"
+                            src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.10.jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">512</span>
+                                <span className="font-bold">Our Product</span>
                             </div>
                         </div>
                     </div>
@@ -66,15 +65,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Product Cube"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYHquoyGC0hA9OCMj3KMOiREyoWuZJ1FH5_XG39ZKiEZhrSI5oowjhyV2xncd93ZCOXfCAC-hvsdRpxUwyvVt4imFuj8pkIuhhSutuKM1PBATAKRdDvRZTiYC7796Pr6rVj6LG14E4K4M9f2djy1_yXsagKukSWNq-wzIc9f_zGZvmD-bLOrn4jm8FMfmmgs7bu8xe5T0WRyXJyGffQnh55ecNSWp0iiETX3amkK4pMgRtS0WegLVabHFQ_hA7-kkO_suwwf2y9B02"
+                            src="/images/products/Cube.jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">124</span>
+                                <span className="font-bold">Cube Type</span>
                             </div>
                         </div>
                     </div>
@@ -84,15 +82,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Factory Activity"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNe7ZTHrZgYsvtbL_EnZL8QrJ598UAQ3TzJh_IVJv8mKziRh_iwUgCjtcALeN5pKlrsn7PXVgU8xkAZ_GJly-juz0UAlmVaKk5LseSWmBTuvOnNX4NWYqo8WsRIdVJavXeQLmgDn83UfvzTFgNaeQnx5_me6LYbgQAg2xmQKqfEQDIxQ6cmrjkuFpctTSBAWWHrEeDQ9I8eiRtVzrh5ky0OOOtaZpMvLRuodLhQ6r89-Kk7r1H3NTyJlMsPqjal1kNtwiXI4cXgNIy"
+                            src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09.jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">89</span>
+                                <span className="font-bold">Production Process</span>
                             </div>
                         </div>
                     </div>
@@ -102,15 +99,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Product RCL"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsVqXKsgnBYoLu_PKsv25xXOmIeLHz6Jf92Eh2IbFfNAU1C74O5aFVbbCYEAsE9sVSKTwi1qaD_zTvPonp7FXW8gxNBHZo3ZEDWL2iU7GMmNhJ74SbtkyFIs6OqecIVXI94hyg-D8k_BPhBxDc9Qxqomh3oY2U3-UyT2j2D04Y6L2U1l1TSc1NxuzcOzYsYmbMOUFeCDzZU5u7w4ACitfqzpNSzaPqhWIaaDOO6bX-ltGMy1b-5R9NN_a-Ha1AiZSEnWdKA799u5F9"
+                            src="/images/products/RCLw.jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">210</span>
+                                <span className="font-bold">RCL Type</span>
                             </div>
                         </div>
                     </div>
@@ -120,15 +116,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Warehouse Bags"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAznYEqsowpMbQrxR5OiSdMggu7bGrmRwM0BfX4z7duGQPS7LsfOL_1HjFES98m7q8JJzxu6OaDQsHlTz7o8A_TU0zg5-ayu3AtfYMuZRtmLKPTwQvE9UO8-NPsmSgNlzd-HPBsRRbMETJE1Yl-uWsOXl386nBWYQWQG8_wxR3I8PEJGBJk9dCcLAVtwJp6oiDnL2CFA74dpjBVZlKuuHIay4enwqNjtVmuQ2b_zoPjLOKY0W8JbiXHln1yjXHjTezFODc90HwOvEOu"
+                            src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.08.jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">433</span>
+                                <span className="font-bold">Product Packages</span>
                             </div>
                         </div>
                     </div>
@@ -138,15 +133,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Quality Control"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXu-DqQ5R0Pfgj0KZyRvuOcGTSlm6DBumenQjU146RO5HQq5HRqUyfstx8EzCu98V5mZ3jJmkuikkYu1QbQw8M7wBIeY2V1Qj2NZtf2DRcfHcx8h9_Gj67fHg81YMJEiQihxX5hjjqhun9uueUkQczQqpOxFAmexpfTRPeBsE0Kv4vl3qA0_sTdaqStAuJc7gbdI0BWCezNQyFr8grsTga75PgvWCLozoknTFYf_zGuJtR4Cnw-Qy0cnBxfBHx8dV8Gmou6zC73mlGSO"
+                            src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09 (3).jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">187</span>
+                                <span className="font-bold">Our Warehouse</span>
                             </div>
                         </div>
                     </div>
@@ -156,15 +150,14 @@ export default function BentoProfile() {
                         <Image
                             alt="Shipping Preparation"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAKxf3sVZBil2nuoQW4oSvCaii67TYqAyf1MIiWs2p0nvhJZEV-mWrw6iM1ih6iPd8L3vr1i6FOQ0KUPKlQr5r-udca3XhTgbDODTE6roo0UP2bHJO3EcM6rtghHypvamTZ3EjfaG_aOuaVmfhAbp4h8bSsQ02XgU4LNHOQPvh2QYoOlCWLnknvMAWhgIM4e-GbaN8cu9a8UkTa1k6kUy76S52HPQ2VDoDVIwyxLAQ9_t7ijy9Uz4l9pi8_jZk496BV2nvtExshGwJ"
+                            src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09 (2).jpeg"
                             fill
                             loading="eager"
                             sizes="(max-width: 768px) 100vw, 25vw"
                         />
                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
                             <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined materials-filled">favorite</span>
-                                <span className="font-bold">295</span>
+                                <span className="font-bold">Production</span>
                             </div>
                         </div>
                     </div>
