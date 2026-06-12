@@ -7,17 +7,22 @@ import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
 export function Footer() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const isTheCompany = pathname === "/the-company";
 
-  const fontMain = isHome
-    ? "font-roboto"
-    : pathname?.startsWith("/about")
-      ? "font-outfit"
-      : "font-inter";
-  const fontDisplay = isHome
-    ? "font-lora"
-    : pathname?.startsWith("/about")
-      ? "font-outfit"
-      : "font-playfair";
+  const fontMain = isTheCompany
+    ? "font-manrope"
+    : isHome
+      ? "font-roboto"
+      : pathname?.startsWith("/about")
+        ? "font-outfit"
+        : "font-inter";
+  const fontDisplay = isTheCompany
+    ? "font-manrope"
+    : isHome
+      ? "font-lora"
+      : pathname?.startsWith("/about")
+        ? "font-outfit"
+        : "font-playfair";
 
   return (
     <footer
@@ -83,6 +88,14 @@ export function Footer() {
                   className="text-gray-400 hover:text-home-primary transition-colors text-sm"
                 >
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/the-company"
+                  className="text-gray-400 hover:text-home-primary transition-colors text-sm"
+                >
+                  the Company
                 </Link>
               </li>
               <li>
