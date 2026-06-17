@@ -28,7 +28,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Featured Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbProduksi.png"
+              src="/images/theCompany/thumbProduksi.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -59,7 +59,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbrawGrind.png"
+              src="/images/theCompany/thumbrawGrind.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -86,7 +86,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbSortir.png"
+              src="/images/theCompany/thumbSortir.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -111,7 +111,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbpack1.png"
+              src="/images/theCompany/thumbpack1.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -138,7 +138,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbPack2.png"
+              src="/images/theCompany/thumbPack2.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
