@@ -111,7 +111,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbpack1.PNG"
+              src="/images/theCompany/thumbPack1.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
