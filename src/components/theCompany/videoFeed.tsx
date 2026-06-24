@@ -81,12 +81,12 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
           {/* Secondary Video 2 */}
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/pipil.mp4")}
+            onClick={() => openVideoModal("/video/stuffing.mp4")}
           >
             <Image
               alt="Video Thumbnail"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbSortir.PNG"
+              src="/images/theCompany/thumbstuffing.PNG"
               fill
               loading="eager"
               sizes="(max-width: 768px) 100vw, 25vw"
@@ -99,7 +99,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
               </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-              <h4 className="text-white font-bold text-lg">Sort products</h4>
+              <h4 className="text-white font-bold text-lg">Stuffing Process</h4>
             </div>
           </div>
 
