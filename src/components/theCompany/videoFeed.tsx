@@ -40,7 +40,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black/90 to-transparent">
               <h3 className="text-white font-bold text-2xl md:text-3xl">
                 Production Process Overview
               </h3>
@@ -71,7 +71,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 Raw Material Handling
               </h4>
@@ -98,7 +98,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">Stuffing Process</h4>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 Packaging Ahmad C25
               </h4>
@@ -133,7 +133,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
           {/* Secondary Video 4 */}
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/Qualitycontrol.mp4")}
+            onClick={() => openVideoModal("/video/Qualitycontrol.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -150,7 +150,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 Product Burn Test
               </h4>
@@ -159,7 +159,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid6.mp4")}
+            onClick={() => openVideoModal("/video/vid6.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -176,7 +176,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 Packing Hexa type
               </h4>
@@ -185,7 +185,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid7.mp4")}
+            onClick={() => openVideoModal("/video/vid7.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -202,14 +202,14 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">Unload Process</h4>
             </div>
           </div>
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid9.mp4")}
+            onClick={() => openVideoModal("/video/Vid9.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -226,7 +226,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 Production Process
               </h4>
@@ -235,7 +235,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid10.mp4")}
+            onClick={() => openVideoModal("/video/Vid10.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -252,7 +252,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">
                 QC Cube Type 30x32
               </h4>
@@ -261,7 +261,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid11.mp4")}
+            onClick={() => openVideoModal("/video/Vid11.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -278,14 +278,14 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">Export Process</h4>
             </div>
           </div>
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/vid12.mp4")}
+            onClick={() => openVideoModal("/video/Vid12.mp4")}
           >
             <Image
               alt="Video Thumbnail"
@@ -302,7 +302,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                 </span>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
               <h4 className="text-white font-bold text-lg">QC Hexa Type</h4>
             </div>
           </div>
