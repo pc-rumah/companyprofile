@@ -306,6 +306,132 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
               <h4 className="text-white font-bold text-lg">QC Hexa Type</h4>
             </div>
           </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid13.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid13.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">
+                Packing Hexa Line
+              </h4>
+            </div>
+          </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid14.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid14.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">
+                Our Process in Action
+              </h4>
+            </div>
+          </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid15.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid15.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">
+                Packing Cube type 25
+              </h4>
+            </div>
+          </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid16.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid16.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">QC RCL 27x40</h4>
+            </div>
+          </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid17.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid17.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">QC Cube type 25</h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>
