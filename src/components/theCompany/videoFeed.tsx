@@ -435,7 +435,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
 
           <div
             className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/Vid18.mp4")}
+            onClick={() => openVideoModal("/video/vid18.mp4")}
           >
             <Image
               alt="Video Thumbnail"
