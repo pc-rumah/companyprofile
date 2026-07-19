@@ -432,6 +432,32 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
               <h4 className="text-white font-bold text-lg">QC Cube type 25</h4>
             </div>
           </div>
+
+          <div
+            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+            onClick={() => openVideoModal("/video/Vid18.mp4")}
+          >
+            <Image
+              alt="Video Thumbnail"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+              src="/images/theCompany/thumbvid18.PNG"
+              fill
+              loading="eager"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">
+                  play_circle
+                </span>
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+              <h4 className="text-white font-bold text-lg">
+                Product Manufacturing Hexa Line Type 25
+              </h4>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -139,7 +139,7 @@ export default function Home() {
               { title: "Cube", img: "/images/products/Cube.jpeg" },
               { title: "Hexa", img: "/images/products/Hexa.jpeg" },
               { title: "Hexa Line", img: "/images/products/hexa line.jpeg" },
-              { title: "RCL", img: "/images/products/RCLw.jpeg" },
+              { title: "RCL", img: "/images/products/RCL1.jpeg" },
             ].map((product, idx) => (
               <div
                 key={idx}

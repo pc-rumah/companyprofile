@@ -61,7 +61,7 @@ const products: Product[] = [
     title: "RCL",
     description:
       "Cylindrical stick briquettes ideal for specific industrial or specialized ceremonial burning needs.",
-    image: "/images/products/RCLw.jpeg",
+    image: "/images/products/RCL.jpeg",
     specs: [
       { label: "Diameter", value: "1.8cm - 2.0cm" },
       { label: "Quick Ignition", value: "" },
