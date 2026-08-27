@@ -1,16 +1,36 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Lora, Outfit, Playfair_Display, Roboto_Condensed, Oswald, Manrope } from "next/font/google";
+import {
+  Inter,
+  Roboto,
+  Lora,
+  Outfit,
+  Playfair_Display,
+  Roboto_Condensed,
+  Oswald,
+  Manrope,
+} from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import WhatsAppChat from "@/components/WhatsAppChat";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const roboto = Roboto({ weight: ["300", "400", "500", "700"], subsets: ["latin"], variable: "--font-roboto" });
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
-const robotoCondensed = Roboto_Condensed({ subsets: ["latin"], variable: "--font-roboto-condensed" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  variable: "--font-roboto-condensed",
+});
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
@@ -27,8 +47,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={clsx(
@@ -40,12 +66,13 @@ export default function RootLayout({
           robotoCondensed.variable,
           oswald.variable,
           manrope.variable,
-          "antialiased font-sans"
+          "antialiased font-sans",
         )}
       >
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppChat />
       </body>
     </html>
   );
