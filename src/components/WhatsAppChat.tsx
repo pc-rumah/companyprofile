@@ -7,7 +7,7 @@ import WhatsAppIcon from "./Icons/WhatsAppIcon";
 export default function WhatsAppChat() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const adminPhone = "628123456789";
+  const adminPhone = "6285735925977";
 
   const message = "Hai! saya ingin bertanya mengenai produk anda.";
 
