@@ -41,12 +41,7 @@ export default function TheCompany() {
         </div>
       </section>
 
-      {/* Floating Impact Stats */}
       <FloatingImpact />
-
-      {/* Horizontal Timeline Section */}
-      <HorizontalTimeline />
-
       {/* Bento Profile Layout */}
       <BentoProfile />
 
