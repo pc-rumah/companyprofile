@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import HorizontalTimeline from "@/components/theCompany/horizontalTimeline";
-import FloatingImpact from "@/components/theCompany/floatingImpact";
 import BentoProfile from "@/components/theCompany/bentoProfile";
 import VideoFeed from "@/components/theCompany/videoFeed";
 import Image from "next/image";
@@ -41,7 +39,6 @@ export default function TheCompany() {
         </div>
       </section>
 
-      <FloatingImpact />
       {/* Bento Profile Layout */}
       <BentoProfile />
 
