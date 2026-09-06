@@ -49,7 +49,7 @@ export default function GalleryPage() {
                                     controls
                                     poster="https://lh3.googleusercontent.com/aida-public/AB6AXuAwVL7vExXl1O-zniYQpw0TCXxh9zI49Ti2wIZMMZWEIOSDlLd482yKrLmVGC3YxkwOzTEDh0RsRoKH-NsX754du7Ek4ByhvWVTp43s5iq95d-kLAon6FFk2CshL_eZw66pg861hOsYJ7x_Rpo7wjMNkBwxZp0esicVACuVX2H4nXwfeqGoRQtPwK5geK3xImm_6g-l3t-AOEM23UIj-JZqa_uUOzaNnWgvBORmgk8AdwQzEyh9up-6UdciSx2u4Cj9y63hlfbfG1a9"
                                 >
-                                    <source src="/video/vid1.mp4" type="video/mp4" />
+                                    <source src={getVideoUrl("vid1.mp4")} type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
