@@ -112,4 +112,40 @@ export const COMPANY_VIDEOS: VideoItem[] = [
     fileName: "vid18.mp4",
     thumbnail: "/images/theCompany/thumbvid18.PNG",
   },
+  {
+    id: "cetak-cube-25",
+    title: "Product Manufacturing Cube Type 25",
+    fileName: "Vid19.mp4",
+    thumbnail: "/images/theCompany/thumb19.PNG",
+  },
+  {
+    id: "cetak-hole-40-32",
+    title: "Product Manufacturing Cube Hole 40x32",
+    fileName: "Vid20.mp4",
+    thumbnail: "/images/theCompany/thumb20.PNG",
+  },
+  {
+    id: "cetak-hexa-28-lis",
+    title: "Product Manufacturing Hexa Type 28x28",
+    fileName: "Vid21.mp4",
+    thumbnail: "/images/theCompany/thumb21.PNG",
+  },
+  {
+    id: "cetak-rcl-27x40",
+    title: "Product Manufacturing RCL Type 27x40",
+    fileName: "Vid22.mp4",
+    thumbnail: "/images/theCompany/thumb22.PNG",
+  },
+  {
+    id: "packing-process-hexa-25x5",
+    title: "Packing Process Hexa Type 25x5",
+    fileName: "Vid23.mp4",
+    thumbnail: "/images/theCompany/thumb23.PNG",
+  },
+  {
+    id: "qc-process-rcl-27x40",
+    title: "QC Process RCL Type 27x40",
+    fileName: "Vid24.mp4",
+    thumbnail: "/images/theCompany/thumb24.PNG",
+  },
 ];
