@@ -1,13 +1,16 @@
 import Image from "next/image";
+import { COMPANY_VIDEOS } from "@/data/videos";
+import { getVideoUrl } from "@/lib/supabase/storage";
 
 interface VideoFeedProps {
   onPlayVideo: (videoSrc: string) => void;
 }
 
 export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
-  const openVideoModal = (videoSrc: string) => {
-    onPlayVideo(videoSrc);
+  const openVideoModal = (fileName: string) => {
+    onPlayVideo(getVideoUrl(fileName));
   };
+
   return (
     <section className="py-16 bg-company-surface-lowest">
       <div className="max-w-7xl mx-auto px-8">
@@ -20,142 +23,72 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
-          {/* Featured Video (Spans 2 cols, 2 rows) */}
-          <div
-            className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/production.mp4")}
-          >
-            <Image
-              alt="Featured Video Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbProduksi.PNG"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-xl group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-4xl">
-                  play_circle
-                </span>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/90 to-transparent">
-              <h3 className="text-white font-bold text-2xl md:text-3xl">
-                Production Process Overview
-              </h3>
-              <p className="hidden lg:block text-company-on-surface-variant text-base mt-2">
-                Inside our state-of-the-art production line ensuring maximum
-                efficiency.
-              </p>
-            </div>
-          </div>
+          {COMPANY_VIDEOS.map((video) => {
+            if (video.featured) {
+              return (
+                <div
+                  key={video.id}
+                  className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+                  onClick={() => openVideoModal(video.fileName)}
+                >
+                  <Image
+                    alt={video.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                    src={video.thumbnail}
+                    fill
+                    loading="eager"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-xl group-hover:scale-110 transition-transform">
+                      <span className="material-symbols-outlined text-4xl">
+                        play_circle
+                      </span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black/90 to-transparent">
+                    <h3 className="text-white font-bold text-2xl md:text-3xl">
+                      {video.title}
+                    </h3>
+                    {video.description && (
+                      <p className="hidden lg:block text-company-on-surface-variant text-base mt-2">
+                        {video.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            }
 
-          {/* Secondary Video 1 */}
-          <div
-            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/rawGrind.mp4")}
-          >
-            <Image
-              alt="Video Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbrawGrind.PNG"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  play_circle
-                </span>
+            return (
+              <div
+                key={video.id}
+                className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
+                onClick={() => openVideoModal(video.fileName)}
+              >
+                <Image
+                  alt={video.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                  src={video.thumbnail}
+                  fill
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
+                    <span className="material-symbols-outlined text-3xl">
+                      play_circle
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
+                  <h4 className="text-white font-bold text-lg">
+                    {video.title}
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-              <h4 className="text-white font-bold text-lg">
-                Ship & Raw Material Handling
-              </h4>
-            </div>
-          </div>
-
-          {/* Secondary Video 2 */}
-          <div
-            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/pipil.mp4")}
-          >
-            <Image
-              alt="Video Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbSortir.PNG"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  play_circle
-                </span>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-              <h4 className="text-white font-bold text-lg">Raw Materials</h4>
-            </div>
-          </div>
-
-          {/* Secondary Video 3 */}
-          <div
-            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("/video/packaging.mp4")}
-          >
-            <Image
-              alt="Video Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbpack1.PNG"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  play_circle
-                </span>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-              <h4 className="text-white font-bold text-lg">
-                Packaging Ahmad C25
-              </h4>
-            </div>
-          </div>
-
-          {/* Secondary Video 4 */}
-          <div
-            className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-            onClick={() => openVideoModal("video/packaging2.mp4")}
-          >
-            <Image
-              alt="Video Thumbnail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-              src="/images/theCompany/thumbPack2.PNG"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-3xl">
-                  play_circle
-                </span>
-              </div>
-            </div>
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-              <h4 className="text-white font-bold text-lg">
-                Product Burn Test
-              </h4>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
