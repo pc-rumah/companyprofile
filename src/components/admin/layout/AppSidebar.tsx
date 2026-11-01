@@ -10,6 +10,7 @@ import {
   UserCircleIcon,
   TableIcon,
   ListIcon,
+  ImageIcon,
 } from "../icons";
 
 type NavItem = {
@@ -30,14 +31,9 @@ const navItems: NavItem[] = [
     path: "/admin/profile",
   },
   {
-    name: "Data Tables",
-    icon: <TableIcon className="size-5" />,
-    path: "/admin/tables",
-  },
-  {
-    name: "Form Elements",
-    icon: <ListIcon className="size-5" />,
-    path: "/admin/forms",
+    name: "The Company",
+    icon: <ImageIcon className="size-5" />,
+    path: "/admin/the-company",
   },
 ];
 
@@ -54,13 +50,11 @@ const AppSidebar: React.FC = () => {
 
   return (
     <aside
-      className={`fixed top-0 left-0 z-40 flex h-screen flex-col border-r border-gray-200 bg-white transition-all duration-300 ease-in-out dark:border-gray-800 dark:bg-gray-900 ${
-        isMobileOpen
-          ? "translate-x-0 w-64"
-          : "-translate-x-full lg:translate-x-0"
-      } ${
-        !isMobileOpen && (isExpanded || isHovered ? "w-64" : "w-20")
-      }`}
+      className={`fixed top-0 left-0 z-40 flex h-screen flex-col border-r border-gray-200 bg-white transition-all duration-300 ease-in-out dark:border-gray-800 dark:bg-gray-900 ${isMobileOpen
+        ? "translate-x-0 w-64"
+        : "-translate-x-full lg:translate-x-0"
+        } ${!isMobileOpen && (isExpanded || isHovered ? "w-64" : "w-20")
+        }`}
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -96,11 +90,10 @@ const AppSidebar: React.FC = () => {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                  active
-                    ? "bg-brand-50 text-brand-600 dark:bg-brand-500/15 dark:text-brand-400"
-                    : "text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-white"
-                } ${!showFullSidebar ? "justify-center px-2" : ""}`}
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${active
+                  ? "bg-brand-50 text-brand-600 dark:bg-brand-500/15 dark:text-brand-400"
+                  : "text-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-white"
+                  } ${!showFullSidebar ? "justify-center px-2" : ""}`}
                 title={!showFullSidebar ? item.name : undefined}
               >
                 <span className={active ? "text-brand-600 dark:text-brand-400" : "text-gray-500 dark:text-gray-400"}>
@@ -121,9 +114,8 @@ const AppSidebar: React.FC = () => {
           <Link
             href="/"
             target="_blank"
-            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white transition-colors ${
-              !showFullSidebar ? "justify-center px-2" : ""
-            }`}
+            className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-white transition-colors ${!showFullSidebar ? "justify-center px-2" : ""
+              }`}
             title="View Public Website"
           >
             <svg

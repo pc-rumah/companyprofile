@@ -1,6 +1,24 @@
 import Image from "next/image";
+import { CompanyImage } from "@/lib/supabase/the-company";
 
-export default function BentoProfile() {
+interface BentoProfileProps {
+  images: CompanyImage[];
+}
+
+export default function BentoProfile({ images }: BentoProfileProps) {
+  const getImage = (slot: string) =>
+    images.find((img) => img.slot === slot);
+
+  const bentoSlots = [
+    "bento_1",
+    "bento_2",
+    "bento_3",
+    "bento_4",
+    "bento_5",
+    "bento_6",
+    "bento_7",
+  ];
+
   return (
     <section className="py-16 bg-company-surface-lowest">
       <div className="max-w-7xl mx-auto px-8">
@@ -61,124 +79,42 @@ export default function BentoProfile() {
             </button>
           </div>
 
-          {/* Bento Cell: Image 1 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Burning Charcoal"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.10.jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Our Product</span>
-              </div>
-            </div>
-          </div>
+          {/* Dynamic Bento Image Cells */}
+          {bentoSlots.map((slot) => {
+            const img = getImage(slot);
+            if (!img) return null;
 
-          {/* Bento Cell: Image 2 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Product Cube"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/products/Cube.jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Cube Type</span>
-              </div>
-            </div>
-          </div>
+            const isWide = img.col_span === 2;
 
-          {/* Bento Cell: Image 3 (Spans 2 cols) */}
-          <div className="h-[250px] md:h-full md:col-span-2 group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Factory Activity"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09.jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Production Process</span>
+            return (
+              <div
+                key={slot}
+                className={`h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container ${
+                  isWide ? "md:col-span-2" : ""
+                }`}
+              >
+                <Image
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src={img.src}
+                  fill
+                  loading="eager"
+                  sizes={
+                    isWide
+                      ? "(max-width: 768px) 100vw, 50vw"
+                      : "(max-width: 768px) 100vw, 25vw"
+                  }
+                />
+                {img.caption && (
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
+                    <div className="flex items-center gap-2">
+                      <span className="font-bold">{img.caption}</span>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          </div>
-
-          {/* Bento Cell: Image 4 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Product RCL"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/products/RCL.jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">RCL Type</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Bento Cell: Image 5 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Warehouse Bags"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.08.jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Product Packages</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Bento Cell: Image 6 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Quality Control"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09 (3).jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Our Warehouse</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Bento Cell: Image 7 */}
-          <div className="h-[250px] md:h-full group relative overflow-hidden rounded-3xl bg-company-surface-container">
-            <Image
-              alt="Shipping Preparation"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09 (2).jpeg"
-              fill
-              loading="eager"
-              sizes="(max-width: 768px) 100vw, 25vw"
-            />
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4 text-white">
-              <div className="flex items-center gap-2">
-                <span className="font-bold">Production</span>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

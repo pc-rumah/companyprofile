@@ -155,3 +155,9 @@ export const SearchIcon: React.FC<IconProps> = ({ className = "size-5", ...props
   </svg>
 );
 
+export const ImageIcon: React.FC<IconProps> = ({ className = "size-5", ...props }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} {...props}>
+    <path fillRule="evenodd" clipRule="evenodd" d="M3.25 6A2.75 2.75 0 016 3.25h12A2.75 2.75 0 0120.75 6v12A2.75 2.75 0 0118 20.75H6A2.75 2.75 0 013.25 18V6zm1.5 0c0-.69.56-1.25 1.25-1.25h12c.69 0 1.25.56 1.25 1.25v8.19l-3.22-3.22a.75.75 0 00-1.06 0L11.5 14.44l-2.47-2.47a.75.75 0 00-1.06 0L4.75 15.19V6zM4.75 18v-1.19l3.75-3.75 2.47 2.47a.75.75 0 001.06 0l3.47-3.47 3.75 3.75V18c0 .69-.56 1.25-1.25 1.25H6c-.69 0-1.25-.56-1.25-1.25zM9.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" fill="currentColor"/>
+  </svg>
+);
+

@@ -18,10 +18,10 @@ export default function AdminProfilePage() {
   const role = user?.role || "authenticated";
   const createdAt = user?.created_at
     ? new Date(user.created_at).toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
     : "Active Member";
   const lastSignIn = user?.last_sign_in_at
     ? new Date(user.last_sign_in_at).toLocaleString()
@@ -103,7 +103,7 @@ export default function AdminProfilePage() {
                 <Label htmlFor="displayName">Display Name</Label>
                 <Input
                   id="displayName"
-                  defaultValue={user?.user_metadata?.full_name || "Castle Administrator"}
+                  defaultValue={user?.user_metadata?.full_name || "Administrator"}
                   placeholder="Full Name"
                 />
               </div>
@@ -128,7 +128,7 @@ export default function AdminProfilePage() {
                 <Label htmlFor="designation">Role / Designation</Label>
                 <Input
                   id="designation"
-                  defaultValue="Operations & Export Admin"
+                  defaultValue="Operations Admin"
                 />
               </div>
             </div>

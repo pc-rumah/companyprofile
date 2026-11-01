@@ -1,12 +1,13 @@
 import Image from "next/image";
-import { COMPANY_VIDEOS } from "@/data/videos";
+import { CompanyVideo } from "@/lib/supabase/the-company";
 import { getVideoUrl } from "@/lib/supabase/storage";
 
 interface VideoFeedProps {
+  videos: CompanyVideo[];
   onPlayVideo: (videoSrc: string) => void;
 }
 
-export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
+export default function VideoFeed({ videos, onPlayVideo }: VideoFeedProps) {
   const openVideoModal = (fileName: string) => {
     onPlayVideo(getVideoUrl(fileName));
   };
@@ -23,13 +24,13 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[250px]">
-          {COMPANY_VIDEOS.map((video) => {
+          {videos.map((video) => {
             if (video.featured) {
               return (
                 <div
                   key={video.id}
                   className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-                  onClick={() => openVideoModal(video.fileName)}
+                  onClick={() => openVideoModal(video.file_name)}
                 >
                   <Image
                     alt={video.title}
@@ -64,7 +65,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
               <div
                 key={video.id}
                 className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
-                onClick={() => openVideoModal(video.fileName)}
+                onClick={() => openVideoModal(video.file_name)}
               >
                 <Image
                   alt={video.title}
@@ -82,9 +83,7 @@ export default function VideoFeed({ onPlayVideo }: VideoFeedProps) {
                   </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-linear-to-t from-black/80 to-transparent">
-                  <h4 className="text-white font-bold text-lg">
-                    {video.title}
-                  </h4>
+                  <h4 className="text-white font-bold text-lg">{video.title}</h4>
                 </div>
               </div>
             );

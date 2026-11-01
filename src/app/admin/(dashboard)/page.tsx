@@ -2,15 +2,46 @@ import React from "react";
 import EcommerceMetrics from "@/components/admin/ecommerce/EcommerceMetrics";
 import MonthlySalesChart from "@/components/admin/ecommerce/MonthlySalesChart";
 import MonthlyTarget from "@/components/admin/ecommerce/MonthlyTarget";
-import StatisticsChart from "@/components/admin/ecommerce/StatisticsChart";
-import RecentOrders from "@/components/admin/ecommerce/RecentOrders";
-import DemographicCard from "@/components/admin/ecommerce/DemographicCard";
+import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
   title: "Dashboard Overview | Castle Trading Admin",
 };
 
-export default function AdminDashboardPage() {
+export const dynamic = "force-dynamic";
+
+export default async function AdminDashboardPage() {
+  let todayCount = 0;
+  let yesterdayCount = 0;
+  let visitorsGrowth = "+0.0%";
+  let isVisitorsPositive = true;
+
+  try {
+    const supabase = await createClient();
+    const today = new Date().toISOString().split("T")[0];
+    const yesterday = new Date(Date.now() - 86400000).toISOString().split("T")[0];
+
+    const { data: visits } = await supabase
+      .from("daily_visits")
+      .select("date, total_visits")
+      .in("date", [today, yesterday]);
+
+    todayCount = visits?.find((v) => v.date === today)?.total_visits ?? 0;
+    yesterdayCount = visits?.find((v) => v.date === yesterday)?.total_visits ?? 0;
+
+    if (yesterdayCount > 0) {
+      const diff = todayCount - yesterdayCount;
+      const pct = Math.abs((diff / yesterdayCount) * 100).toFixed(1);
+      visitorsGrowth = diff >= 0 ? `+${pct}%` : `-${pct}%`;
+      isVisitorsPositive = diff >= 0;
+    } else if (todayCount > 0) {
+      visitorsGrowth = "+100%";
+      isVisitorsPositive = true;
+    }
+  } catch (err) {
+    console.error("Failed to load visitor metrics:", err);
+  }
+
   return (
     <div className="space-y-6">
       {/* Page Header */}
@@ -23,41 +54,21 @@ export default function AdminDashboardPage() {
             Real-time analytics and global distribution overview
           </p>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-success-50 text-success-600 dark:bg-success-500/15 dark:text-success-400">
-            <span className="size-2 rounded-full bg-success-500 animate-pulse"></span>
-            Live System Active
-          </span>
-        </div>
       </div>
 
       {/* Top Grid: Metrics & Target */}
       <div className="grid grid-cols-12 gap-4 md:gap-6">
         <div className="col-span-12 space-y-6 xl:col-span-7">
-          <EcommerceMetrics />
+          <EcommerceMetrics
+            dailyVisitors={todayCount}
+            visitorsGrowth={visitorsGrowth}
+            isVisitorsPositive={isVisitorsPositive}
+          />
           <MonthlySalesChart />
         </div>
 
         <div className="col-span-12 xl:col-span-5">
           <MonthlyTarget />
-        </div>
-      </div>
-
-      {/* Mid Grid: Full Statistics */}
-      <div className="grid grid-cols-12 gap-4 md:gap-6">
-        <div className="col-span-12">
-          <StatisticsChart />
-        </div>
-      </div>
-
-      {/* Bottom Grid: Recent Shipments & Market Demographics */}
-      <div className="grid grid-cols-12 gap-4 md:gap-6">
-        <div className="col-span-12 xl:col-span-7">
-          <RecentOrders />
-        </div>
-
-        <div className="col-span-12 xl:col-span-5">
-          <DemographicCard />
         </div>
       </div>
     </div>
