@@ -4,7 +4,7 @@ import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-import { ChevronLeftIcon, EyeIcon, EyeCloseIcon, AlertIcon, CheckCircleIcon } from "@/components/admin/icons";
+import { ChevronLeftIcon, EyeIcon, EyeCloseIcon, AlertIcon } from "@/components/admin/icons";
 import { ThemeToggleButton } from "@/components/admin/common/ThemeToggleButton";
 import Button from "@/components/admin/ui/Button";
 import Input from "@/components/admin/form/InputField";
@@ -16,22 +16,18 @@ function SignInContent() {
   const searchParams = useSearchParams();
   const next = searchParams.get("next") || "/admin";
 
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const supabase = createClient();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
-    setSuccessMessage(null);
 
     if (!email || !password) {
       setErrorMessage("Please enter both email and password.");
@@ -41,46 +37,19 @@ function SignInContent() {
     setLoading(true);
 
     try {
-      if (mode === "signin") {
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-        if (error) {
-          setErrorMessage(error.message);
-          return;
-        }
+      if (error) {
+        setErrorMessage(error.message);
+        return;
+      }
 
-        if (data.session) {
-          router.push(next);
-          router.refresh();
-        }
-      } else {
-        const { data, error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: {
-              full_name: fullName,
-            },
-          },
-        });
-
-        if (error) {
-          setErrorMessage(error.message);
-          return;
-        }
-
-        if (data.session) {
-          router.push(next);
-          router.refresh();
-        } else {
-          setSuccessMessage(
-            "Account registered! Please check your email to confirm registration or sign in."
-          );
-          setMode("signin");
-        }
+      if (data.session) {
+        router.push(next);
+        router.refresh();
       }
     } catch (err: any) {
       setErrorMessage(err.message || "An unexpected authentication error occurred.");
@@ -111,48 +80,14 @@ function SignInContent() {
               CT
             </div>
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
-              {mode === "signin" ? "Admin Portal Sign In" : "Create Admin Account"}
+              Admin Portal Sign In
             </h1>
             <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">
-              {mode === "signin"
-                ? "Enter your credentials to access the administrative dashboard"
-                : "Register a new user account with Supabase Auth"}
+              Enter your credentials to access the administrative dashboard
             </p>
           </div>
 
-          {/* Mode Tabs */}
-          <div className="flex rounded-lg bg-gray-100 p-1 mb-6 dark:bg-gray-800">
-            <button
-              type="button"
-              onClick={() => {
-                setMode("signin");
-                setErrorMessage(null);
-              }}
-              className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition ${
-                mode === "signin"
-                  ? "bg-white text-gray-900 shadow-theme-xs dark:bg-gray-700 dark:text-white"
-                  : "text-gray-500 hover:text-gray-800 dark:text-gray-400"
-              }`}
-            >
-              Sign In
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                setMode("signup");
-                setErrorMessage(null);
-              }}
-              className={`flex-1 py-1.5 text-xs font-semibold rounded-md transition ${
-                mode === "signup"
-                  ? "bg-white text-gray-900 shadow-theme-xs dark:bg-gray-700 dark:text-white"
-                  : "text-gray-500 hover:text-gray-800 dark:text-gray-400"
-              }`}
-            >
-              Sign Up
-            </button>
-          </div>
-
-          {/* Feedback Alerts */}
+          {/* Feedback Alert */}
           {errorMessage && (
             <div className="mb-4 flex items-start gap-2.5 rounded-lg border border-error-200 bg-error-50 p-3 text-xs text-error-700 dark:border-error-500/30 dark:bg-error-500/10 dark:text-error-400">
               <AlertIcon className="size-4 shrink-0 mt-0.5 text-error-500" />
@@ -160,29 +95,8 @@ function SignInContent() {
             </div>
           )}
 
-          {successMessage && (
-            <div className="mb-4 flex items-start gap-2.5 rounded-lg border border-success-200 bg-success-50 p-3 text-xs text-success-700 dark:border-success-500/30 dark:bg-success-500/10 dark:text-success-400">
-              <CheckCircleIcon className="size-4 shrink-0 mt-0.5 text-success-500" />
-              <span>{successMessage}</span>
-            </div>
-          )}
-
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4">
-            {mode === "signup" && (
-              <div>
-                <Label htmlFor="fullname">Full Name</Label>
-                <Input
-                  id="fullname"
-                  type="text"
-                  placeholder="e.g. John Doe"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  required
-                />
-              </div>
-            )}
-
             <div>
               <Label htmlFor="email">
                 Email Address <span className="text-error-500">*</span>
@@ -209,7 +123,7 @@ function SignInContent() {
                   placeholder="••••••••"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  autoComplete={mode === "signin" ? "current-password" : "new-password"}
+                  autoComplete="current-password"
                   required
                 />
                 <button
@@ -234,11 +148,9 @@ function SignInContent() {
                 checked={rememberMe}
                 onChange={setRememberMe}
               />
-              {mode === "signin" && (
-                <span className="text-gray-400 hover:underline cursor-pointer" title="Contact administrator for password resets">
-                  Forgot password?
-                </span>
-              )}
+              <span className="text-gray-400 hover:underline cursor-pointer" title="Contact administrator for password resets">
+                Forgot password?
+              </span>
             </div>
 
             <div className="pt-2">
@@ -270,10 +182,8 @@ function SignInContent() {
                     </svg>
                     Authenticating...
                   </span>
-                ) : mode === "signin" ? (
-                  "Sign In to Admin Portal"
                 ) : (
-                  "Create Admin Account"
+                  "Sign In to Admin Portal"
                 )}
               </Button>
             </div>
