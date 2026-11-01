@@ -11,9 +11,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import WhatsAppChat from "@/components/WhatsAppChat";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const roboto = Roboto({
@@ -66,13 +63,10 @@ export default function RootLayout({
           robotoCondensed.variable,
           oswald.variable,
           manrope.variable,
-          "antialiased font-sans",
+          "antialiased font-sans"
         )}
       >
-        <Navbar />
         {children}
-        <Footer />
-        <WhatsAppChat />
       </body>
     </html>
   );
