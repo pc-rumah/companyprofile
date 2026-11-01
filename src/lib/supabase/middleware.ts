@@ -36,7 +36,7 @@ export async function updateSession(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // Route protection
-  const isAuthRoute = pathname === "/admin/signin" || pathname === "/admin/signup";
+  const isAuthRoute = pathname === "/admin/signin";
   const isAdminRoute = pathname.startsWith("/admin");
 
   // Unauthenticated user trying to access protected admin pages
@@ -47,7 +47,7 @@ export async function updateSession(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  // Already authenticated user visiting signin/signup
+  // Already authenticated user visiting signin
   if (isAuthRoute && user) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin";
