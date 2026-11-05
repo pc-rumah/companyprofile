@@ -3,9 +3,18 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "PT Castle Trading Group - Factory Storyboard",
+  title: "Factory Storyboard & Production Gallery",
   description:
-    "Witness the journey of excellence. From raw material selection to the intense heat of carbonization.",
+    "Witness the journey of excellence at PT Castle Trading Group. Explore our production storyboard: raw material sieving, carbonization, quality sorting, and burn testing in Semarang, Indonesia.",
+  alternates: {
+    canonical: "/gallery",
+  },
+  openGraph: {
+    title: "Production Storyboard | PT Castle Trading Group Factory Gallery",
+    description:
+      "Explore the craftsmanship behind premium Indonesian coconut charcoal briquettes.",
+    url: "/gallery",
+  },
 };
 
 export default function GalleryPage() {
@@ -116,6 +125,7 @@ export default function GalleryPage() {
           className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
           src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.08 (2).jpeg"
           fill
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute top-0 left-0 w-full p-12 flex flex-col items-center z-10">
@@ -236,6 +246,7 @@ export default function GalleryPage() {
           className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
           src="/images/gallery/WhatsApp Image 2026-02-10 at 10.21.09 (3).jpeg"
           fill
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute top-0 left-0 w-full p-12 flex flex-col items-center z-10">

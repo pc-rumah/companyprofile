@@ -98,7 +98,7 @@ export default function BentoProfile({ images }: BentoProfileProps) {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   src={img.src}
                   fill
-                  loading="eager"
+                  loading="lazy"
                   sizes={
                     isWide
                       ? "(max-width: 768px) 100vw, 50vw"

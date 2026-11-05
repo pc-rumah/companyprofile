@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Us - Sustainable Energy from Nature's Core",
+  description:
+    "Learn about PT Castle Trading Group, a leading coconut charcoal manufacturer based in Semarang, Central Java, Indonesia. Converting coconut shell waste into eco-friendly briquettes.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About PT Castle Trading Group | Coconut Charcoal Manufacturer",
+    description:
+      "Transforming coconut shell waste into premium charcoal briquettes for the world. Located in Semarang, Indonesia.",
+    url: "/about",
+  },
+};
 
 export default function About() {
   return (
@@ -39,10 +55,10 @@ export default function About() {
             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
             <Image
               src="/images/buildings/factory.jpeg"
-              alt="Castle Trading Group Warehouse Facility"
+              alt="PT Castle Trading Group Charcoal Factory and Warehouse Facility in Semarang, Indonesia"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              loading="eager"
+              loading="lazy"
               className="object-cover transform group-hover:scale-105 transition-transform duration-700"
             />
           </div>

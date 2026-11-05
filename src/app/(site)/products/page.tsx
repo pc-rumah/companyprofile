@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Coconut Charcoal Briquette Products - Cube, Hexa, RCL",
+  description:
+    "Explore our export-grade coconut charcoal briquettes: Cube Hole 32, Cube, Hexa, RCL, and Hexa Line. High calorific value, <2.5% ash content, 2+ hours burning time for Shisha and BBQ.",
+  alternates: {
+    canonical: "/products",
+  },
+  openGraph: {
+    title: "Export-Grade Coconut Charcoal Briquettes | PT Castle Trading Group",
+    description:
+      "Precision-engineered briquette shapes for Shisha, Hookah, and BBQ. 100% natural coconut shell with minimal ash and odorless burn.",
+    url: "/products",
+  },
+};
 
 interface ProductSpec {
   label: string;
@@ -89,7 +105,7 @@ const ProductCard = ({ product }: { product: Product }) => (
     <div className="relative w-full md:w-2/5 min-h-[300px] md:min-h-[400px]">
       <Image
         src={product.image}
-        alt={product.title}
+        alt={`${product.title} Coconut Shell Charcoal Briquette - ${product.category}`}
         fill
         className="object-contain"
         sizes="(max-width: 768px) 100vw, 40vw"
@@ -116,8 +132,36 @@ const ProductCard = ({ product }: { product: Product }) => (
 );
 
 export default function Products() {
+  const productListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Coconut Charcoal Briquette Products",
+    description: "Export-quality coconut charcoal briquettes for shisha and BBQ.",
+    itemListElement: products.map((prod, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: prod.title,
+        description: prod.description,
+        image: prod.image,
+        category: prod.category,
+        brand: {
+          "@type": "Brand",
+          name: "PT Castle Trading Group",
+        },
+      },
+    })),
+  };
+
   return (
     <main className="bg-[#121212] min-h-screen text-white font-inter">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productListJsonLd),
+        }}
+      />
       {/* Header */}
       <header className="relative bg-[#0d0d0d] py-20 lg:py-32 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 z-0">
@@ -125,6 +169,7 @@ export default function Products() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9S6iYtmsgfR4c42MmYnVTrADKlIlvpqBZZYM-OSPG6m1zRmEt-S0L7qXlSCKYHGx_kDTmc96E-V8GSmFA52TdJKkyVsV0Ia0m4MA2KuTYll4SeBQPSPa9ETpCFAIhsMsHPpiUf_vsLWJcB3HjotNxj3Fg3yZCUF_Lf_HnNBZ3I6mRS0I0YsDZUVJBpOegogLiuVBtkZBxvj2GOh4l7Tn-ujBT5VGJ3C35FRyXSKFNjdcZMmCnk9P3JXEANKX53PCRVsrKX-JiyiaX"
             alt="Dark textured background representing charcoal"
             fill
+            sizes="100vw"
             className="object-cover opacity-20 grayscale"
             priority
           />

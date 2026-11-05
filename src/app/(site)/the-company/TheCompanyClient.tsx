@@ -32,7 +32,7 @@ export default function TheCompanyClient({ images, videos }: TheCompanyClientPro
             className="w-full h-full object-cover"
             src={heroSrc}
             fill
-            loading="eager"
+            sizes="100vw"
             priority
           />
           <div className="absolute inset-0 bg-black/60"></div>
@@ -76,6 +76,8 @@ export default function TheCompanyClient({ images, videos }: TheCompanyClientPro
                 className="w-full h-full"
                 controls
                 autoPlay
+                playsInline
+                preload="metadata"
                 src={activeVideo}
               >
                 Your browser does not support the video tag.

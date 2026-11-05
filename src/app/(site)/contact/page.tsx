@@ -1,8 +1,56 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Contact Us - Sales & Export Inquiries",
+  description:
+    "Contact PT Castle Trading Group for quotations, OEM/custom packaging, and sample requests for coconut charcoal briquettes. Factory located in Semarang, Central Java, Indonesia.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact Sales & Export | PT Castle Trading Group",
+    description:
+      "Send us an inquiry for premium coconut shell charcoal briquettes. Fast 24-hour response for international B2B buyers.",
+    url: "/contact",
+  },
+};
+
 export default function Contact() {
+    const contactJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        name: "Contact PT Castle Trading Group",
+        description: "Official contact page for coconut charcoal sales, samples, and export inquiries.",
+        mainEntity: {
+            "@type": "LocalBusiness",
+            name: "PT Castle Trading Group",
+            telephone: "+62-857-3592-5977",
+            email: "Castlegroup0101@gmail.com",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "Ngrowo, Karangjati, Bergas",
+                addressLocality: "Semarang Regency",
+                addressRegion: "Central Java",
+                postalCode: "50552",
+                addressCountry: "ID",
+            },
+            geo: {
+                "@type": "GeoCoordinates",
+                latitude: -7.176008,
+                longitude: 110.428299,
+            },
+        },
+    };
+
     return (
         <main className="min-h-screen bg-home-bg-dark text-white font-inter selection:bg-home-primary selection:text-white pt-20">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(contactJsonLd),
+                }}
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 

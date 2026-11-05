@@ -1,5 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Accreditation & Quality Certifications",
+  description:
+    "Verified international standards: KAN-accredited laboratory test results, factory audit certificates, and export compliance for PT Castle Trading Group coconut charcoal briquettes.",
+  alternates: {
+    canonical: "/certificates",
+  },
+  openGraph: {
+    title: "Accreditation & Quality Certifications | PT Castle Trading Group",
+    description:
+      "KAN-accredited laboratory test results and factory audit certifications proving our commitment to premium export quality.",
+    url: "/certificates",
+  },
+};
 
 export default function Certificates() {
     return (

@@ -1,6 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+export const metadata: Metadata = {
+  title: "Sustainable Coconut Charcoal Briquettes Manufacturer & Exporter",
+  description:
+    "PT Castle Trading Group empowers global energy with 100% renewable coconut charcoal briquettes. Premium high-heat, low-ash briquettes for shisha and BBQ exported worldwide from Indonesia.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "PT Castle Trading Group | Coconut Charcoal Briquettes Exporter",
+    description:
+      "Premium coconut shell charcoal briquettes manufactured with precision for international shisha and barbecue markets.",
+    url: "/",
+  },
+};
 
 export default function Home() {
   return (
@@ -10,8 +26,9 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7i9oK8PgDhGGdxtBgMGPgfFkPITTuZ9e4ZxVQU0c0Cq0YfCjLZdlXROfyrZILlLA13P38whQe88CH1PIZMnVhgqEh4AlncQrOIdFILmCcvMCU0WP4y60xcZG2DnL06qcu8fpSMu49AMZ34m50GpUULPgI9u322mesOf7KZDzDNDoL65D7RIYmB35E_MpeNjvte930UrnoRhieH94X1fKae5GiU856U2yxwyvUXva6KIkvd4GCr8_gOcLO9eKrG3mUizzL-mhDx6oT"
-            alt="Glowing charcoal embers"
+            alt="High-heat glowing coconut charcoal briquettes produced by PT Castle Trading Group"
             fill
+            sizes="100vw"
             className="object-cover object-center brightness-50"
             priority
           />
@@ -148,7 +165,7 @@ export default function Home() {
                 <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden bg-gray-200 dark:bg-gray-800 h-64 relative block">
                   <Image
                     src={product.img}
-                    alt={product.title}
+                    alt={`${product.title} Premium Coconut Shell Charcoal Briquette`}
                     fill
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

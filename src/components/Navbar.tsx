@@ -54,9 +54,10 @@ export function Navbar() {
               <span>
                 <Image
                   src="/images/logo.png"
-                  alt="Castle Trading Logo"
+                  alt="PT Castle Trading Group Logo"
                   width={32}
                   height={32}
+                  priority
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
               </span>

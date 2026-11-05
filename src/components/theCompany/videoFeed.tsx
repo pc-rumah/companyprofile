@@ -12,6 +12,19 @@ export default function VideoFeed({ videos, onPlayVideo }: VideoFeedProps) {
     onPlayVideo(getVideoUrl(fileName));
   };
 
+  const prefetchVideo = (fileName: string) => {
+    if (typeof document !== "undefined") {
+      const url = getVideoUrl(fileName);
+      if (url && !document.querySelector(`link[rel="prefetch"][href="${url}"]`)) {
+        const link = document.createElement("link");
+        link.rel = "prefetch";
+        link.as = "video";
+        link.href = url;
+        document.head.appendChild(link);
+      }
+    }
+  };
+
   return (
     <section className="py-16 bg-company-surface-lowest">
       <div className="max-w-7xl mx-auto px-8">
@@ -31,13 +44,14 @@ export default function VideoFeed({ videos, onPlayVideo }: VideoFeedProps) {
                   key={video.id}
                   className="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
                   onClick={() => openVideoModal(video.file_name)}
+                  onMouseEnter={() => prefetchVideo(video.file_name)}
                 >
                   <Image
-                    alt={video.title}
+                    alt={`${video.title} - Factory Video`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                     src={video.thumbnail}
                     fill
-                    loading="eager"
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
@@ -66,14 +80,15 @@ export default function VideoFeed({ videos, onPlayVideo }: VideoFeedProps) {
                 key={video.id}
                 className="group relative overflow-hidden rounded-3xl bg-company-surface-container cursor-pointer"
                 onClick={() => openVideoModal(video.file_name)}
+                onMouseEnter={() => prefetchVideo(video.file_name)}
               >
                 <Image
-                  alt={video.title}
+                  alt={`${video.title} - Factory Video`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                   src={video.thumbnail}
                   fill
-                  loading="eager"
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full bg-company-primary/90 flex items-center justify-center text-company-surface shadow-lg group-hover:scale-110 transition-transform">
